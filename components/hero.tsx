@@ -5,12 +5,12 @@ export function Hero() {
   return (
     <section className="flex min-h-screen items-center justify-center px-6 pt-20">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 text-center">
-        <div className="relative h-28 w-28 overflow-hidden rounded-full border-2 border-border">
+        <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-border shadow-sm">
           <Image
             src="/images/avatar.jpg"
             alt="Foto de Luis Alberto Ortiz Meza"
             fill
-            className="object-cover"
+            className="object-cover object-top"
             priority
           />
         </div>
