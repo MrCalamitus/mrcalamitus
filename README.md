@@ -1,6 +1,6 @@
 # Hi there, I'm Luis Ortiz 👋
 
-### Founder of Zoga & Certisep | AWS Solutions Architect | Cybersecurity Expert
+### Co-Founder of Zoga & Certisep | AWS Solutions Architect | Cybersecurity Expert
 
 Expert software developer and entrepreneur with over **15 years of experience** building scalable systems. Currently focused on automating business processes through **Multi-agent AI systems** and **RAG implementation**.
 
