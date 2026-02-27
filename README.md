@@ -4,7 +4,7 @@
   <h3>Founder & CTO @ ZOGA | Cloud Architect | AI Experimentalist</h3>
 
   <p align="center">
-    <a href="https://zoga.com.mx"><b>Website</b></a> • 
+    <a href="https://mrcalamitus.com"><b>Website</b></a> • 
     <a href="https://www.linkedin.com/in/mrcalamitus"><b>LinkedIn</b></a>
   </p>
 </div>
@@ -12,11 +12,12 @@
 ---
 
 ### ⚡ The Executive Summary
-Soy un **Technical Leader** con 15 años transformando ideas en sistemas de escala global. Mi día a día se divide entre la arquitectura de nubes resilientes y la experimentación con IA generativa para desplazar los límites de lo posible.
+Soy un **Technical Leader** con 15 años transformando ideas en sistemas de gran escala. Mi día a día se divide entre la arquitectura de nubes resilientes y la experimentación con IA generativa para desplazar los límites de lo posible.
 
 - 🏗️ **Core**: Arquitecto de soluciones en **[ZOGA](https://zoga.com.mx)** (Certisep, Digipris regulación en línea, Iaprep, Red Integral Notarial).
+- 🚀 **Entrepenur**: Visión de emprendedor con Upperbus, Rideupp y Certisep.
 - ☁️ **Cloud Mastery**: Especialista en ecosistemas masivos en **AWS** y **Google Cloud**.
-- 🧪 **AI Alchemy**: Experimentando con flujos de **Generative Media** (HeyGen, ElevenLabs, Nano Banana).
+- 🧪 **AI Alchemy**: Experimentando con flujos de **Generative Media** ( Cloude Code, Gemini, Cursor, HeyGen, ElevenLabs, Nano Banana ).
 - 📍 **Status**: Escalando sistemas desde CDMX, con la brújula apuntando a **Mérida**.
 
 ---
@@ -33,6 +34,8 @@ Mi flujo de trabajo combina la elegancia de Apple con la potencia bruta de Linux
 
 ### 🛠️ Tech Stack & Digital Arsenal
 
+[![My Skills](https://skillicons.dev/icons?i=aws,gcp,linux,ubuntu,apple,python,js,docker,figma,postman)](https://skillicons.dev)
+
 #### **Cloud & Scalability**
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![EC2](https://img.shields.io/badge/EC2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white)
@@ -40,6 +43,9 @@ Mi flujo de trabajo combina la elegancia de Apple con la potencia bruta de Linux
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-623CE4?style=for-the-badge&logo=terraform&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Cybersecurity](https://img.shields.io/badge/Cybersecurity-000000?style=for-the-badge&logo=eset&logoColor=white)
 
 #### **AI & Content Generation**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -55,16 +61,6 @@ Mi flujo de trabajo combina la elegancia de Apple con la potencia bruta de Linux
 
 ### 🔥 System Analytics
 <div align="center">
-  <table border="0">
-    <tr>
-      <td>
-        <img src="https://github-readme-stats.vercel.app/api?username=MrCalamitus&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="170px"/>
-      </td>
-      <td>
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MrCalamitus&layout=compact&theme=tokyonight&hide_border=true" height="170px"/>
-      </td>
-    </tr>
-  </table>
   <img src="https://streak-stats.demolab.com?user=MrCalamitus&theme=tokyonight&hide_border=true" width="100%" />
 </div>
 
