@@ -1,63 +1,85 @@
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=00b4d8&height=200&section=header&text=LUIS%20ORTIZ&fontSize=70&animation=fadeIn&fontAlignY=35" width="100%"/>
+# Hi there, I'm Luis Ortiz 👋
 
-  <h3>Founder & CTO @ ZOGA | Cloud Architect | AI Experimentalist</h3>
+### Founder of Zoga & Certisep | AWS Solutions Architect | Cybersecurity Expert
 
-  <p align="center">
-    <a href="https://mrcalamitus.com"><b>Website</b></a> • 
-    <a href="https://www.linkedin.com/in/mrcalamitus"><b>LinkedIn</b></a>
-  </p>
-</div>
+Expert software developer and entrepreneur with over **15 years of experience** building scalable systems. Currently focused on automating business processes through **Multi-agent AI systems** and **RAG implementation**.
 
----
-
-### ⚡ The Executive Summary
-Soy un **Technical Leader** con 15 años transformando ideas en sistemas de gran escala. Mi día a día se divide entre la arquitectura de nubes resilientes y la experimentación con IA generativa para desplazar los límites de lo posible.
-
-- 🏗️ **Core**: Arquitecto de soluciones en **[ZOGA](https://zoga.com.mx)** (Certisep, Digipris regulación en línea, Iaprep, Red Integral Notarial).
-- 🚀 **Entrepenur**: Visión de emprendedor con Upperbus, Rideupp y Certisep.
-- ☁️ **Cloud Mastery**: Especialista en ecosistemas masivos en **AWS** y **Google Cloud**.
-- 🧪 **AI Alchemy**: Experimentando con flujos de **Generative Media** ( Cloude Code, Gemini, Cursor, HeyGen, ElevenLabs, Nano Banana ).
-- 📍 **Status**: Escalando sistemas desde CDMX, con la brújula apuntando a **Mérida**.
+- 🛠️ **Building:** [Zoga](https://zoga.com.mx) & [Certisep](https://certisep.com)
+- 🎓 **Education:** Master's Degree in Cybersecurity
+- 🚀 **Specialization:** Cloud Infrastructure (AWS), Applied AI, and High-Scale Systems.
+- 💬 **Ask me about:** AI Video/Image generation (HeyGen, ElevenLabs), RAG, and Cloud Security.
 
 ---
 
-### 💻 The Engine Room (Setup & Workflow)
-Mi flujo de trabajo combina la elegancia de Apple con la potencia bruta de Linux:
+### 🛠️ Tech Stack & Mastery
 
-| **Environment** | **Hardware** | **Tools** |
-| :--- | :--- | :--- |
-| **Linux (Ubuntu + Zsh)** | RTX 4070 Ti | 128GB RAM | **Cloud Code** |
-| **macOS (Workstation)** | Mac Studio | **Cursor, Cloud Code** |
+
+| Category | Tools & Technologies |
+| :--- | :--- |
+| **Cloud & Infrastructure** | ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white) ![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat&logo=google-cloud&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white) ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat&logo=terraform&logoColor=white) |
+| **Applied AI** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) **RAG Frameworks** | **Multi-Agent Systems** | **HeyGen** | **ElevenLabs** |
+| **Cybersecurity** | ![Security](https://img.shields.io/badge/Master_in_Cybersecurity-000000?style=flat&logo=eset&logoColor=white) **Security Dev** | **Cloud Security Audit** |
+| **OS & Tools** | ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white) ![MacOS](https://img.shields.io/badge/MacOS-000000?style=flat&logo=apple&logoColor=white) ![Zsh](https://img.shields.io/badge/Zsh-000000?style=flat&logo=gnuterminal&logoColor=white) |
+
+### Cloud & Infrastructure
+<p align="left">
+<a href="https://skillicons.dev">
+<img src="https://skillicons.dev/icons?i=aws,gcp,firebase,terraform" />
+</a>
+</p>
+
+### Systems & Shell
+<p align="left">
+<a href="https://skillicons.dev">
+<img src="https://skillicons.dev/icons?i=linux,ubuntu,debian,apple,bash" />
+</a>
+</p>
+
+### Languages & Backend
+<p align="left">
+<a href="https://skillicons.dev">
+<img src="https://skillicons.dev/icons?i=python,ts,js,nodejs,express" />
+</a>
+</p>
+
+### Frontend & API
+<p align="left">
+<a href="https://skillicons.dev">
+<img src="https://skillicons.dev/icons?i=vue,htmx,html,graphql" />
+</a>
+</p>
+
+### Databases
+<p align="left">
+<a href="https://skillicons.dev">
+<img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,dynamodb" />
+</a>
+</p>
+
+### DevOps & Tools
+<p align="left">
+<a href="https://skillicons.dev">
+<img src="https://skillicons.dev/icons?i=docker,git,github,npm,postman,jest" />
+</a>
+</p>
+
+### AI & Hardware
+<p align="left">
+<a href="https://skillicons.dev">
+<img src="https://skillicons.dev/icons?i=pytorch,raspberrypi" />
+</a>
+</p>
+
+### Productivity & Editors
+<p align="left">
+<a href="https://skillicons.dev">
+<img src="https://skillicons.dev/icons?i=vscode,vim,notion,md" />
+</a>
+</p>
+
 
 ---
 
-### 🛠️ Tech Stack & Digital Arsenal
-
-[![My Skills](https://skillicons.dev/icons?i=aws,gcp,linux,ubuntu,apple,python,js,docker,figma,postman)](https://skillicons.dev)
-
-#### **Cloud & Scalability**
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![EC2](https://img.shields.io/badge/EC2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white)
-![Lambda](https://img.shields.io/badge/Lambda-FF9900?style=for-the-badge&logo=aws-lambda&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-623CE4?style=for-the-badge&logo=terraform&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-![Cybersecurity](https://img.shields.io/badge/Cybersecurity-000000?style=for-the-badge&logo=eset&logoColor=white)
-
-#### **AI & Content Generation**
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![HeyGen](https://img.shields.io/badge/HeyGen-8A2BE2?style=for-the-badge&logo=video&logoColor=white)
-![ElevenLabs](https://img.shields.io/badge/ElevenLabs-000000?style=for-the-badge&logo=audio&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
-
-#### **Operating Systems**
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white)
-
----
 
 ### 🔥 System Analytics
 <div align="center">
@@ -75,3 +97,5 @@ Mi flujo de trabajo combina la elegancia de Apple con la potencia bruta de Linux
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=MrCalamitus&color=00b4d8&style=flat-square&label=PROFILE+VIEWS" />
 </p>
+
+*“Optimizing workflows and scaling ideas through code and intelligence.”*
