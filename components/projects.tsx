@@ -2,35 +2,35 @@ import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Plataforma ZOGA",
     description:
-      "Plataforma de comercio electronico completa con carrito de compras, pagos y panel de administracion. Construida con Next.js, TypeScript y Stripe.",
-    tags: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
-    github: "https://github.com",
-    live: "https://example.com",
+      "Sitio web corporativo y plataforma de servicios de ZOGA. Desarrollo web, mobile y soluciones IT para clientes empresariales en Mexico.",
+    tags: ["Node.js", "AWS", "Web", "IT Solutions"],
+    github: null,
+    live: "https://zoga.com.mx",
   },
   {
-    title: "Task Manager App",
+    title: "Apps Moviles Empresariales",
     description:
-      "Aplicacion de gestion de tareas con drag-and-drop, colaboracion en tiempo real y notificaciones. API REST con autenticacion JWT.",
-    tags: ["React", "Node.js", "PostgreSQL", "Socket.io"],
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "Analytics Dashboard",
-    description:
-      "Dashboard interactivo para visualizacion de datos con graficos en tiempo real, filtros avanzados y exportacion de reportes.",
-    tags: ["React", "D3.js", "Python", "FastAPI"],
-    github: "https://github.com",
+      "Desarrollo de aplicaciones moviles nativas e hibridas para clientes de ZOGA. Integraciones con APIs, notificaciones push y sistemas de autenticacion.",
+    tags: ["React Native", "Node.js", "REST APIs", "Push Notifications"],
+    github: null,
     live: null,
   },
   {
-    title: "CLI DevTools",
+    title: "Arquitectura Cloud AWS",
     description:
-      "Herramienta de linea de comandos para automatizar flujos de trabajo de desarrollo: scaffolding, linting y despliegue.",
-    tags: ["Node.js", "TypeScript", "Commander.js"],
-    github: "https://github.com",
+      "Diseno e implementacion de infraestructura cloud para multiples proyectos. Pipelines CI/CD, contenedores, balanceo de carga y monitoreo.",
+    tags: ["AWS", "Docker", "CI/CD", "CloudFormation"],
+    github: null,
+    live: null,
+  },
+  {
+    title: "APIs & Microservicios",
+    description:
+      "Arquitectura de microservicios para plataformas de alta disponibilidad. APIs REST y servicios backend con Node.js y Python para diversos clientes.",
+    tags: ["Node.js", "Express", "Python", "Django", "PostgreSQL"],
+    github: "https://github.com/mrcalamitus",
     live: null,
   },
 ]

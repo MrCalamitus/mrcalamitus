@@ -18,7 +18,7 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <a href="#" className="text-lg font-semibold tracking-tight text-foreground">
-          TN<span className="text-muted-foreground">.</span>
+          LAOM<span className="text-muted-foreground">.</span>
         </a>
 
         {/* Desktop nav */}

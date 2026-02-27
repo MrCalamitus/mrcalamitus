@@ -1,19 +1,19 @@
 const skillCategories = [
   {
-    category: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS", "Vue.js"],
-  },
-  {
     category: "Backend",
-    skills: ["Node.js", "Python", "PostgreSQL", "REST APIs", "GraphQL", "Redis"],
+    skills: ["Node.js", "Express", "Python", "Django", "REST APIs", "PostgreSQL"],
   },
   {
-    category: "Herramientas",
-    skills: ["Git", "Docker", "AWS", "Vercel", "Figma", "CI/CD"],
+    category: "Cloud & DevOps",
+    skills: ["AWS (EC2, S3, Lambda)", "Docker", "CI/CD", "CloudFormation", "Linux", "Nginx"],
   },
   {
-    category: "Otros",
-    skills: ["Testing", "Agile/Scrum", "Accesibilidad", "SEO", "Rendimiento Web", "Linux"],
+    category: "Frontend & Mobile",
+    skills: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "React Native"],
+  },
+  {
+    category: "Liderazgo & Proceso",
+    skills: ["Arquitectura de Software", "Gestion de Equipos", "Agile / Scrum", "Code Review", "Mentorias", "Planificacion Tecnica"],
   },
 ]
 

@@ -9,21 +9,30 @@ export function About() {
 
         <div className="mt-10 flex flex-col gap-6 text-base leading-relaxed text-muted-foreground">
           <p>
-            Soy un desarrollador de software apasionado por crear experiencias
-            digitales que combinan un buen diseno con una ingenieria robusta.
-            Mi trabajo se centra en la interseccion entre diseno y desarrollo,
-            creando aplicaciones que no solo funcionan bien, sino que se sienten bien.
+            Soy Luis Alberto Ortiz Meza, co-fundador y Tech Lead de{" "}
+            <a
+              href="https://zoga.com.mx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-foreground underline underline-offset-4 decoration-border hover:decoration-foreground transition-colors"
+            >
+              ZOGA
+            </a>
+            , una empresa especializada en desarrollo mobile, web y soluciones IT.
+            Durante mas de 15 anos he liderado equipos y construido productos
+            digitales que resuelven problemas reales para nuestros clientes.
           </p>
           <p>
-            He tenido la oportunidad de trabajar en diversos entornos: desde startups
-            hasta empresas consolidadas, contribuyendo en proyectos de frontend,
-            backend y arquitectura de sistemas. Me motiva resolver problemas
-            complejos con soluciones elegantes.
+            Mi stack principal gira en torno a Node.js y Express para backend,
+            Python y Django para servicios especializados, y AWS para
+            infraestructura cloud. Me apasiona disenar arquitecturas escalables,
+            automatizar procesos y llevar proyectos desde la idea hasta produccion.
           </p>
           <p>
-            Cuando no estoy programando, me gusta leer sobre tecnologia,
-            contribuir a proyectos open source y aprender nuevas herramientas
-            que mejoren mi flujo de trabajo.
+            En ZOGA he tenido la oportunidad de trabajar en proyectos de diversa
+            escala: desde apps moviles hasta plataformas empresariales complejas,
+            siempre con un enfoque en calidad, rendimiento y la mejor experiencia
+            para el usuario final.
           </p>
         </div>
       </div>

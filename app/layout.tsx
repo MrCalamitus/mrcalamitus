@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 export const metadata: Metadata = {
-  title: 'Tu Nombre - Software Developer',
-  description: 'Portfolio personal de un desarrollador de software. Proyectos, experiencia y habilidades.',
+  title: 'Luis Alberto Ortiz Meza - Co-fundador & Tech Lead en ZOGA',
+  description: 'Portfolio de Luis Alberto Ortiz Meza. Co-fundador y Tech Lead en ZOGA, con +15 anos de experiencia en desarrollo full-stack, Node.js, Python y AWS.',
   icons: {
     icon: [
       {

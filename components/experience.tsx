@@ -1,35 +1,21 @@
 const experiences = [
   {
-    period: "2023 -- Presente",
-    role: "Senior Frontend Developer",
-    company: "Tech Company",
+    period: "2011 -- Presente",
+    role: "Co-fundador, Tech Lead & Full-Stack Developer",
+    company: "ZOGA mobile & IT",
+    companyUrl: "https://zoga.com.mx",
     description:
-      "Lidero el desarrollo del frontend de la plataforma principal. Implemento nuevas funcionalidades, mejoro el rendimiento y mentorizo a desarrolladores junior.",
-    tags: ["React", "TypeScript", "Next.js", "GraphQL"],
+      "Co-funde ZOGA hace mas de 15 anos. Lidero el equipo tecnico y participo activamente en el desarrollo full-stack de proyectos web, mobile y soluciones IT. Defino la arquitectura de sistemas, gestiono infraestructura cloud en AWS y mentorizo al equipo de desarrollo.",
+    tags: ["Node.js", "Express", "Python", "Django", "AWS", "Leadership"],
   },
   {
-    period: "2021 -- 2023",
-    role: "Full Stack Developer",
-    company: "Startup SaaS",
+    period: "2009 -- 2011",
+    role: "Full-Stack Developer",
+    company: "Freelance / Proyectos Independientes",
+    companyUrl: null,
     description:
-      "Desarrolle funcionalidades end-to-end para una plataforma SaaS B2B. Diseñe APIs REST, implemente integraciones con terceros y optimice consultas de base de datos.",
-    tags: ["Node.js", "React", "PostgreSQL", "AWS"],
-  },
-  {
-    period: "2019 -- 2021",
-    role: "Frontend Developer",
-    company: "Agencia Digital",
-    description:
-      "Construi sitios web y aplicaciones interactivas para multiples clientes. Trabaje con equipos de diseno para traducir mockups en interfaces funcionales y responsivas.",
-    tags: ["JavaScript", "Vue.js", "SCSS", "Figma"],
-  },
-  {
-    period: "2018 -- 2019",
-    role: "Junior Developer",
-    company: "Consultora IT",
-    description:
-      "Comence mi carrera profesional desarrollando modulos internos, automatizando procesos y aprendiendo buenas practicas de desarrollo de software.",
-    tags: ["Java", "Spring Boot", "MySQL"],
+      "Desarrolle proyectos web y aplicaciones a medida para diversos clientes. Construi APIs, integre servicios de terceros y gane experiencia en multiples tecnologias que posteriormente aplique en la fundacion de ZOGA.",
+    tags: ["Python", "JavaScript", "MySQL", "Linux"],
   },
 ]
 
@@ -58,9 +44,20 @@ export function Experience() {
                 <h3 className="mt-2 text-base font-semibold text-foreground">
                   {exp.role}
                 </h3>
-                <p className="text-sm font-medium text-muted-foreground">
-                  {exp.company}
-                </p>
+                {exp.companyUrl ? (
+                  <a
+                    href={exp.companyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-muted-foreground underline underline-offset-4 decoration-border hover:decoration-foreground hover:text-foreground transition-colors"
+                  >
+                    {exp.company}
+                  </a>
+                ) : (
+                  <p className="text-sm font-medium text-muted-foreground">
+                    {exp.company}
+                  </p>
+                )}
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {exp.description}
                 </p>

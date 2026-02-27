@@ -3,20 +3,20 @@ import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react"
 const contactLinks = [
   {
     label: "Email",
-    value: "tu@email.com",
-    href: "mailto:tu@email.com",
+    value: "contacto@zoga.com.mx",
+    href: "mailto:contacto@zoga.com.mx",
     icon: Mail,
   },
   {
     label: "GitHub",
-    value: "github.com/tuusuario",
-    href: "https://github.com",
+    value: "github.com/mrcalamitus",
+    href: "https://github.com/mrcalamitus",
     icon: Github,
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/tuusuario",
-    href: "https://linkedin.com",
+    value: "linkedin.com/in/mrcalamitus",
+    href: "https://www.linkedin.com/in/mrcalamitus",
     icon: Linkedin,
   },
 ]
@@ -32,7 +32,7 @@ export function Contact() {
 
         <div className="mt-10">
           <p className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl text-balance">
-            {"Si quieres hablar sobre un proyecto o simplemente saludar, no dudes en contactarme."}
+            {"Hablemos de tu proximo proyecto. Estoy disponible para consultoria, desarrollo y colaboraciones."}
           </p>
         </div>
 

@@ -8,7 +8,7 @@ export function Hero() {
         <div className="relative h-28 w-28 overflow-hidden rounded-full border-2 border-border">
           <Image
             src="/images/avatar.jpg"
-            alt="Foto de perfil"
+            alt="Foto de Luis Alberto Ortiz Meza"
             fill
             className="object-cover"
             priority
@@ -17,20 +17,20 @@ export function Hero() {
 
         <div className="flex flex-col gap-4">
           <p className="text-sm font-medium tracking-widest uppercase text-muted-foreground">
-            Software Developer
+            Co-fundador & Tech Lead en ZOGA
           </p>
           <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-6xl text-balance">
-            Hola, soy Tu Nombre
+            Luis Alberto Ortiz Meza
           </h1>
           <p className="mx-auto max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty">
-            Desarrollo aplicaciones web modernas con enfoque en rendimiento,
-            accesibilidad y experiencia de usuario.
+            +15 anos construyendo soluciones digitales. Full-Stack Developer
+            especializado en Node.js, Python y arquitectura cloud con AWS.
           </p>
         </div>
 
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com"
+            href="https://github.com/mrcalamitus"
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-foreground hover:text-foreground"
@@ -39,7 +39,7 @@ export function Hero() {
             <Github className="h-4 w-4" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/mrcalamitus"
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-foreground hover:text-foreground"
@@ -48,7 +48,7 @@ export function Hero() {
             <Linkedin className="h-4 w-4" />
           </a>
           <a
-            href="mailto:tu@email.com"
+            href="mailto:contacto@zoga.com.mx"
             className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-foreground hover:text-foreground"
             aria-label="Email"
           >
