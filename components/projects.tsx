@@ -5,31 +5,31 @@ const projects = [
     title: "Plataforma ZOGA",
     description:
       "Sitio web corporativo y plataforma de servicios de ZOGA. Desarrollo web, mobile y soluciones IT para clientes empresariales en Mexico.",
-    tags: ["Node.js", "AWS", "Web", "IT Solutions"],
+    tags: ["Node.js", "MySQL", "AWS", "Terraform"],
     github: null,
     live: "https://zoga.com.mx",
   },
   {
     title: "Apps Moviles Empresariales",
     description:
-      "Desarrollo de aplicaciones moviles nativas e hibridas para clientes de ZOGA. Integraciones con APIs, notificaciones push y sistemas de autenticacion.",
-    tags: ["React Native", "Node.js", "REST APIs", "Push Notifications"],
+      "Desarrollo de aplicaciones moviles nativas e hibridas para clientes de ZOGA. Integraciones con APIs, notificaciones push y sistemas de autenticacion con Firebase.",
+    tags: ["React Native", "Firebase", "Node.js", "REST APIs"],
     github: null,
     live: null,
   },
   {
-    title: "Arquitectura Cloud AWS",
+    title: "Infraestructura Cloud AWS",
     description:
-      "Diseno e implementacion de infraestructura cloud para multiples proyectos. Pipelines CI/CD, contenedores, balanceo de carga y monitoreo.",
-    tags: ["AWS", "Docker", "CI/CD", "CloudFormation"],
+      "Diseno e implementacion de infraestructura cloud como codigo. Pipelines CI/CD, contenedores, balanceo de carga, monitoreo y gestion con Terraform.",
+    tags: ["AWS", "Terraform", "Docker", "CI/CD", "Linux"],
     github: null,
     live: null,
   },
   {
     title: "APIs & Microservicios",
     description:
-      "Arquitectura de microservicios para plataformas de alta disponibilidad. APIs REST y servicios backend con Node.js y Python para diversos clientes.",
-    tags: ["Node.js", "Express", "Python", "Django", "PostgreSQL"],
+      "Arquitectura de microservicios para plataformas de alta disponibilidad. APIs REST con Node.js y Python, almacenamiento en MySQL y Oracle.",
+    tags: ["Node.js", "Express", "Python", "MySQL", "Oracle"],
     github: "https://github.com/mrcalamitus",
     live: null,
   },
@@ -37,12 +37,12 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="proyectos" className="bg-secondary/50 px-6 py-24">
+    <section id="proyectos" className="bg-secondary/50 px-6 py-24" aria-label="Proyectos destacados">
       <div className="mx-auto max-w-5xl">
         <h2 className="text-sm font-medium tracking-widest uppercase text-muted-foreground">
           Proyectos
         </h2>
-        <div className="mt-6 h-px w-12 bg-foreground" />
+        <div className="mt-6 h-px w-12 bg-foreground" aria-hidden="true" />
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {projects.map((project) => (

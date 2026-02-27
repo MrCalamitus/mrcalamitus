@@ -1,15 +1,17 @@
+import { Award } from "lucide-react"
+
 const skillCategories = [
   {
     category: "Backend",
-    skills: ["Node.js", "Express", "Python", "Django", "REST APIs", "PostgreSQL"],
+    skills: ["Node.js", "Express.js", "Python", "REST APIs", "Microservicios"],
+  },
+  {
+    category: "Bases de Datos",
+    skills: ["MySQL", "Firebase / Firestore", "Oracle Database", "SQL / NoSQL", "Modelado de Datos"],
   },
   {
     category: "Cloud & DevOps",
-    skills: ["AWS (EC2, S3, Lambda)", "Docker", "CI/CD", "CloudFormation", "Linux", "Nginx"],
-  },
-  {
-    category: "Frontend & Mobile",
-    skills: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "React Native"],
+    skills: ["AWS (EC2, S3, Lambda, RDS)", "Terraform (IaC)", "Docker", "CI/CD Pipelines", "Linux / Nginx"],
   },
   {
     category: "Liderazgo & Proceso",
@@ -19,12 +21,12 @@ const skillCategories = [
 
 export function Skills() {
   return (
-    <section id="habilidades" className="bg-secondary/50 px-6 py-24">
+    <section id="habilidades" className="bg-secondary/50 px-6 py-24" aria-label="Habilidades tecnicas y certificaciones">
       <div className="mx-auto max-w-5xl">
         <h2 className="text-sm font-medium tracking-widest uppercase text-muted-foreground">
           Habilidades
         </h2>
-        <div className="mt-6 h-px w-12 bg-foreground" />
+        <div className="mt-6 h-px w-12 bg-foreground" aria-hidden="true" />
 
         <div className="mt-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {skillCategories.map((cat) => (
@@ -44,6 +46,22 @@ export function Skills() {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Certificaciones */}
+        <div className="mt-16">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground">
+            Certificaciones
+          </h3>
+          <div className="mt-4 flex flex-wrap gap-4">
+            <div className="flex items-center gap-3 rounded-lg border border-border bg-card px-5 py-3">
+              <Award className="h-5 w-5 text-foreground" />
+              <div>
+                <p className="text-sm font-medium text-foreground">AWS Cloud Practitioner</p>
+                <p className="text-xs text-muted-foreground">Amazon Web Services</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
