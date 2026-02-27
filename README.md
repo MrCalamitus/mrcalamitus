@@ -14,7 +14,7 @@
 ### ⚡ The Executive Summary
 Soy un **Technical Leader** con 15 años transformando ideas en sistemas de escala global. Mi día a día se divide entre la arquitectura de nubes resilientes y la experimentación con IA generativa para desplazar los límites de lo posible.
 
-- 🏗️ **Core**: Arquitecto de soluciones en **[ZOGA](https://zoga.com.mx)** (Certisep, Centinela, Iaprep).
+- 🏗️ **Core**: Arquitecto de soluciones en **[ZOGA](https://zoga.com.mx)** (Certisep, Digipris regulación en línea, Iaprep, Red Integral Notarial).
 - ☁️ **Cloud Mastery**: Especialista en ecosistemas masivos en **AWS** y **Google Cloud**.
 - 🧪 **AI Alchemy**: Experimentando con flujos de **Generative Media** (HeyGen, ElevenLabs, Nano Banana).
 - 📍 **Status**: Escalando sistemas desde CDMX, con la brújula apuntando a **Mérida**.
@@ -27,7 +27,7 @@ Mi flujo de trabajo combina la elegancia de Apple con la potencia bruta de Linux
 | **Environment** | **Hardware** | **Tools** |
 | :--- | :--- | :--- |
 | **Linux (Ubuntu + Zsh)** | RTX 4070 Ti | 128GB RAM | **Cloud Code** |
-| **macOS (Workstation)** | Mac Studio 2023 | **VSC** |
+| **macOS (Workstation)** | Mac Studio | **Cursor, Cloud Code** |
 
 ---
 
