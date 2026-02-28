@@ -11,31 +11,36 @@ interface Particle {
   baseY: number
   size: number
   color: string
+  angle: number
+  speed: number
+  orbitRadius: number
 }
 
 const KEYWORDS = [
   "Node.js", "AWS", "Terraform", "MySQL", "Firebase", "Oracle",
   "Docker", "Linux", "API", "CI/CD", "Java", "TypeScript",
   "OpenAI", "RAG", "IoT", "ZOGA", "NativeScript", "Express",
-  "Lambda", "S3", "EC2", "RDS", "Scrum", "Git",
+  "Lambda", "S3", "EC2", "RDS", "Scrum", "Git", "MongoDB",
+  "GraphQL", "PyTorch", "Python", "e.firma",
 ]
 
 export function HeroCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const particlesRef = useRef<Particle[]>([])
-  const mouseRef = useRef({ x: -1000, y: -1000 })
+  const mouseRef = useRef({ x: -1000, y: -1000, active: false })
   const animFrameRef = useRef<number>(0)
-  const keywordsRef = useRef<{ text: string; x: number; y: number; opacity: number; targetOpacity: number }[]>([])
+  const timeRef = useRef(0)
+  const keywordsRef = useRef<{ text: string; x: number; y: number; baseX: number; baseY: number; opacity: number; targetOpacity: number; drift: number; driftSpeed: number }[]>([])
 
   const initParticles = useCallback((width: number, height: number) => {
     const particles: Particle[] = []
-    const count = Math.min(Math.floor((width * height) / 8000), 120)
+    const count = Math.min(Math.floor((width * height) / 7000), 140)
     const colors = [
-      "rgba(0,0,0,0.07)",
+      "rgba(0,0,0,0.08)",
       "rgba(0,0,0,0.05)",
-      "rgba(0,0,0,0.09)",
-      "rgba(30,64,175,0.06)",
-      "rgba(30,64,175,0.04)",
+      "rgba(0,0,0,0.10)",
+      "rgba(30,64,175,0.07)",
+      "rgba(30,64,175,0.05)",
     ]
 
     for (let i = 0; i < count; i++) {
@@ -44,24 +49,34 @@ export function HeroCanvas() {
       particles.push({
         x,
         y,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
+        vx: (Math.random() - 0.5) * 0.8,
+        vy: (Math.random() - 0.5) * 0.8,
         baseX: x,
         baseY: y,
-        size: Math.random() * 2 + 1,
+        size: Math.random() * 2.5 + 0.8,
         color: colors[Math.floor(Math.random() * colors.length)],
+        angle: Math.random() * Math.PI * 2,
+        speed: 0.002 + Math.random() * 0.004,
+        orbitRadius: 20 + Math.random() * 40,
       })
     }
     particlesRef.current = particles
 
-    // Place keywords randomly
-    const kws = KEYWORDS.map((text) => ({
-      text,
-      x: Math.random() * (width - 120) + 60,
-      y: Math.random() * (height - 40) + 20,
-      opacity: 0,
-      targetOpacity: 0,
-    }))
+    const kws = KEYWORDS.map((text) => {
+      const bx = Math.random() * (width - 140) + 70
+      const by = Math.random() * (height - 40) + 20
+      return {
+        text,
+        x: bx,
+        y: by,
+        baseX: bx,
+        baseY: by,
+        opacity: 0,
+        targetOpacity: 0,
+        drift: Math.random() * Math.PI * 2,
+        driftSpeed: 0.003 + Math.random() * 0.006,
+      }
+    })
     keywordsRef.current = kws
   }, [])
 
@@ -94,17 +109,17 @@ export function HeroCanvas() {
       mouseRef.current = {
         x: e.clientX - rect.left,
         y: e.clientY - rect.top,
+        active: true,
       }
     }
 
     const handleMouseLeave = () => {
-      mouseRef.current = { x: -1000, y: -1000 }
+      mouseRef.current = { x: -1000, y: -1000, active: false }
     }
 
     canvas.addEventListener("mousemove", handleMouseMove)
     canvas.addEventListener("mouseleave", handleMouseLeave)
 
-    // Touch support
     const handleTouchMove = (e: TouchEvent) => {
       const rect = canvas.getBoundingClientRect()
       const touch = e.touches[0]
@@ -112,56 +127,72 @@ export function HeroCanvas() {
         mouseRef.current = {
           x: touch.clientX - rect.left,
           y: touch.clientY - rect.top,
+          active: true,
         }
       }
     }
     const handleTouchEnd = () => {
-      mouseRef.current = { x: -1000, y: -1000 }
+      mouseRef.current = { x: -1000, y: -1000, active: false }
     }
     canvas.addEventListener("touchmove", handleTouchMove, { passive: true })
     canvas.addEventListener("touchend", handleTouchEnd)
 
     const animate = () => {
-      const w = canvas.width / (window.devicePixelRatio || 1)
-      const h = canvas.height / (window.devicePixelRatio || 1)
+      const dpr = window.devicePixelRatio || 1
+      const w = canvas.width / dpr
+      const h = canvas.height / dpr
       ctx.clearRect(0, 0, w, h)
 
+      timeRef.current += 1
+      const time = timeRef.current
+
       const mouse = mouseRef.current
-      const mouseRadius = 120
+      const mouseRadius = mouse.active ? 150 : 0
       const particles = particlesRef.current
 
-      // Update and draw particles
+      // Update and draw particles - always moving in orbits
       for (const p of particles) {
-        const dx = mouse.x - p.x
-        const dy = mouse.y - p.y
-        const dist = Math.sqrt(dx * dx + dy * dy)
+        // Continuous orbital movement around base position
+        p.angle += p.speed
+        const orbitX = p.baseX + Math.cos(p.angle) * p.orbitRadius
+        const orbitY = p.baseY + Math.sin(p.angle * 0.7) * p.orbitRadius * 0.6
 
-        if (dist < mouseRadius) {
-          const force = (mouseRadius - dist) / mouseRadius
-          const angle = Math.atan2(dy, dx)
-          p.vx -= Math.cos(angle) * force * 0.8
-          p.vy -= Math.sin(angle) * force * 0.8
+        // Gently steer toward orbit target
+        p.vx += (orbitX - p.x) * 0.008
+        p.vy += (orbitY - p.y) * 0.008
+
+        // Mouse repulsion (stronger when active)
+        if (mouse.active) {
+          const dx = mouse.x - p.x
+          const dy = mouse.y - p.y
+          const dist = Math.sqrt(dx * dx + dy * dy)
+
+          if (dist < mouseRadius) {
+            const force = (mouseRadius - dist) / mouseRadius
+            const angle = Math.atan2(dy, dx)
+            p.vx -= Math.cos(angle) * force * 2.5
+            p.vy -= Math.sin(angle) * force * 2.5
+          }
         }
 
-        // Drift back to base
-        p.vx += (p.baseX - p.x) * 0.005
-        p.vy += (p.baseY - p.y) * 0.005
-
         // Damping
-        p.vx *= 0.97
-        p.vy *= 0.97
+        p.vx *= 0.95
+        p.vy *= 0.95
 
         p.x += p.vx
         p.y += p.vy
 
         // Wrap
-        if (p.x < 0) p.x = w
-        if (p.x > w) p.x = 0
-        if (p.y < 0) p.y = h
-        if (p.y > h) p.y = 0
+        if (p.x < -10) p.x = w + 10
+        if (p.x > w + 10) p.x = -10
+        if (p.y < -10) p.y = h + 10
+        if (p.y > h + 10) p.y = -10
+
+        // Pulsing size
+        const pulse = 1 + Math.sin(time * 0.02 + p.angle) * 0.15
 
         ctx.beginPath()
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
+        ctx.arc(p.x, p.y, p.size * pulse, 0, Math.PI * 2)
         ctx.fillStyle = p.color
         ctx.fill()
       }
@@ -185,17 +216,43 @@ export function HeroCanvas() {
         }
       }
 
-      // Draw keyword cloud - show near mouse
+      // Mouse glow when hovering
+      if (mouse.active) {
+        const gradient = ctx.createRadialGradient(
+          mouse.x, mouse.y, 0,
+          mouse.x, mouse.y, 160
+        )
+        gradient.addColorStop(0, "rgba(30,64,175,0.04)")
+        gradient.addColorStop(1, "rgba(30,64,175,0)")
+        ctx.fillStyle = gradient
+        ctx.fillRect(mouse.x - 160, mouse.y - 160, 320, 320)
+      }
+
+      // Keywords - always gently drifting, more visible near mouse
       const keywords = keywordsRef.current
       for (const kw of keywords) {
-        const dx = mouse.x - kw.x
-        const dy = mouse.y - kw.y
-        const dist = Math.sqrt(dx * dx + dy * dy)
+        // Continuous gentle floating
+        kw.drift += kw.driftSpeed
+        kw.x = kw.baseX + Math.sin(kw.drift) * 12
+        kw.y = kw.baseY + Math.cos(kw.drift * 0.8) * 8
 
-        kw.targetOpacity = dist < 180 ? Math.max(0.08, (180 - dist) / 180) * 0.45 : 0
-        kw.opacity += (kw.targetOpacity - kw.opacity) * 0.06
+        // Base ambient opacity + boost near mouse
+        const ambientOpacity = 0.06 + Math.sin(time * 0.008 + kw.drift) * 0.02
 
-        if (kw.opacity > 0.01) {
+        if (mouse.active) {
+          const dx = mouse.x - kw.x
+          const dy = mouse.y - kw.y
+          const dist = Math.sqrt(dx * dx + dy * dy)
+          kw.targetOpacity = dist < 200
+            ? Math.max(ambientOpacity, ((200 - dist) / 200) * 0.5)
+            : ambientOpacity
+        } else {
+          kw.targetOpacity = ambientOpacity
+        }
+
+        kw.opacity += (kw.targetOpacity - kw.opacity) * 0.04
+
+        if (kw.opacity > 0.005) {
           ctx.font = "11px var(--font-mono, monospace)"
           ctx.fillStyle = `rgba(0, 0, 0, ${kw.opacity})`
           ctx.fillText(kw.text, kw.x, kw.y)

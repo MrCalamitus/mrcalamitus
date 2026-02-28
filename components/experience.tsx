@@ -34,7 +34,7 @@ const experiences: Experience[] = [
     companyKey: "experience.freelance.company",
     companyUrl: null,
     descriptionKey: "experience.freelance.description",
-    tags: ["JavaScript", "MySQL", "Linux", "REST APIs"],
+    tags: ["Java", "MySQL", "Linux", "REST APIs"],
   },
 ]
 
