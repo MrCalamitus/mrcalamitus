@@ -76,7 +76,7 @@ const translations: Record<Locale, Record<string, string>> = {
     "experience.startups.role": "Co-fundador & Tech Lead",
     "experience.startups.company": "Upperbus & Rideupp",
     "experience.startups.description":
-      "Co-fund\u00e9 dos startups de movilidad urbana. Liderazgo de producto, desarrollo de comunidad, gesti\u00f3n de equipos multidisciplinarios, iteraci\u00f3n \u00e1gil y adaptaci\u00f3n a regulaciones locales. Experiencia real navegando incertidumbre y pivoting estrat\u00e9gico.",
+      "Co-fundador dos startups de movilidad urbana. Liderazgo de producto, desarrollo de comunidad, gesti\u00f3n de equipos multidisciplinarios, iteraci\u00f3n \u00e1gil y adaptaci\u00f3n a regulaciones locales. Experiencia real navegando incertidumbre y pivoting estrat\u00e9gico.",
     "experience.freelance.period": "2009 \u2014 2011",
     "experience.freelance.role": "Full-Stack Developer",
     "experience.freelance.company": "Freelance / Proyectos Independientes",
