@@ -13,16 +13,18 @@ import { Footer } from "@/components/footer"
 export default function Page() {
   return (
     <I18nProvider>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Skills />
-        <Contact />
-      </main>
-      <Footer />
+      <div className="min-h-screen bg-background text-foreground">
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Projects />
+          <Experience />
+          <Skills />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </I18nProvider>
   )
 }

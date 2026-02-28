@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { Github, Linkedin, Mail, ArrowDown, Download } from "lucide-react"
 import { useI18n } from "@/lib/i18n"
 import { HeroCanvas } from "@/components/hero-canvas"
@@ -13,13 +12,11 @@ export function Hero() {
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20">
       <HeroCanvas />
       <div className="relative z-10 flex flex-col items-center text-center">
-        <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-border shadow-sm">
-          <Image
+        <div className="h-32 w-32 overflow-hidden rounded-full border-2 border-border shadow-sm">
+          <img
             src="/images/avatar.jpg"
             alt="Luis Alberto Ortiz Meza"
-            fill
-            className="object-cover object-top"
-            priority
+            className="h-full w-full object-cover object-top"
           />
         </div>
 
