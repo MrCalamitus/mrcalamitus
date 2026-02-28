@@ -151,7 +151,7 @@ const translations: Record<Locale, Record<string, string>> = {
     "projects.iaprep.subtitle": "Ed-Tech / AI",
     "projects.iaprep.description":
       "AI-powered platform with advanced analysis capabilities, natural language processing, and machine learning.",
-    "projects.upperbus.title": "Upperbus",
+    "projects.upperbus.title": "Upperbus-Rideupp",
     "projects.upperbus.subtitle": "Collective Mobility",
     "projects.upperbus.description":
       "Co-founder. On-demand collective transportation platform. Product leadership, community building, and city operations.",
