@@ -16,6 +16,18 @@ interface Particle {
   orbitRadius: number
 }
 
+interface Keyword {
+  text: string
+  x: number
+  y: number
+  baseX: number
+  baseY: number
+  opacity: number
+  targetOpacity: number
+  drift: number
+  driftSpeed: number
+}
+
 const KEYWORDS = [
   "Node.js", "AWS", "Terraform", "MySQL", "Firebase", "Oracle",
   "Docker", "Linux", "API", "CI/CD", "Java", "TypeScript",
@@ -30,7 +42,7 @@ export function HeroCanvas() {
   const mouseRef = useRef({ x: -1000, y: -1000, active: false })
   const animFrameRef = useRef<number>(0)
   const timeRef = useRef(0)
-  const keywordsRef = useRef<{ text: string; x: number; y: number; baseX: number; baseY: number; opacity: number; targetOpacity: number; drift: number; driftSpeed: number }[]>([])
+  const keywordsRef = useRef<Keyword[]>([])
 
   const initParticles = useCallback((width: number, height: number) => {
     const particles: Particle[] = []
@@ -62,7 +74,7 @@ export function HeroCanvas() {
     }
     particlesRef.current = particles
 
-    const kws = KEYWORDS.map((text) => {
+    const kws: Keyword[] = KEYWORDS.map((text) => {
       const bx = Math.random() * (width - 140) + 70
       const by = Math.random() * (height - 40) + 20
       return {
@@ -97,43 +109,36 @@ export function HeroCanvas() {
       canvas.height = h * dpr
       canvas.style.width = `${w}px`
       canvas.style.height = `${h}px`
-      ctx.scale(dpr, dpr)
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
       initParticles(w, h)
     }
 
     resize()
     window.addEventListener("resize", resize)
 
-    const handleMouseMove = (e: MouseEvent) => {
+    const handlePointer = (clientX: number, clientY: number) => {
       const rect = canvas.getBoundingClientRect()
       mouseRef.current = {
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top,
+        x: clientX - rect.left,
+        y: clientY - rect.top,
         active: true,
       }
     }
 
+    const handleMouseMove = (e: MouseEvent) => handlePointer(e.clientX, e.clientY)
     const handleMouseLeave = () => {
+      mouseRef.current = { x: -1000, y: -1000, active: false }
+    }
+    const handleTouchMove = (e: TouchEvent) => {
+      const touch = e.touches[0]
+      if (touch) handlePointer(touch.clientX, touch.clientY)
+    }
+    const handleTouchEnd = () => {
       mouseRef.current = { x: -1000, y: -1000, active: false }
     }
 
     canvas.addEventListener("mousemove", handleMouseMove)
     canvas.addEventListener("mouseleave", handleMouseLeave)
-
-    const handleTouchMove = (e: TouchEvent) => {
-      const rect = canvas.getBoundingClientRect()
-      const touch = e.touches[0]
-      if (touch) {
-        mouseRef.current = {
-          x: touch.clientX - rect.left,
-          y: touch.clientY - rect.top,
-          active: true,
-        }
-      }
-    }
-    const handleTouchEnd = () => {
-      mouseRef.current = { x: -1000, y: -1000, active: false }
-    }
     canvas.addEventListener("touchmove", handleTouchMove, { passive: true })
     canvas.addEventListener("touchend", handleTouchEnd)
 
@@ -141,17 +146,23 @@ export function HeroCanvas() {
       const dpr = window.devicePixelRatio || 1
       const w = canvas.width / dpr
       const h = canvas.height / dpr
-      ctx.clearRect(0, 0, w, h)
+      if (w === 0 || h === 0) {
+        animFrameRef.current = requestAnimationFrame(animate)
+        return
+      }
 
+      ctx.clearRect(0, 0, w, h)
       timeRef.current += 1
       const time = timeRef.current
 
       const mouse = mouseRef.current
-      const mouseRadius = mouse.active ? 150 : 0
+      const mouseRadius = 150
       const particles = particlesRef.current
 
       // Update and draw particles - always moving in orbits
-      for (const p of particles) {
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i]
+
         // Continuous orbital movement around base position
         p.angle += p.speed
         const orbitX = p.baseX + Math.cos(p.angle) * p.orbitRadius
@@ -169,20 +180,20 @@ export function HeroCanvas() {
 
           if (dist < mouseRadius) {
             const force = (mouseRadius - dist) / mouseRadius
-            const angle = Math.atan2(dy, dx)
-            p.vx -= Math.cos(angle) * force * 2.5
-            p.vy -= Math.sin(angle) * force * 2.5
+            const repelAngle = Math.atan2(dy, dx)
+            p.vx -= Math.cos(repelAngle) * force * 3
+            p.vy -= Math.sin(repelAngle) * force * 3
           }
         }
 
         // Damping
-        p.vx *= 0.95
-        p.vy *= 0.95
+        p.vx *= 0.94
+        p.vy *= 0.94
 
         p.x += p.vx
         p.y += p.vy
 
-        // Wrap
+        // Wrap around edges
         if (p.x < -10) p.x = w + 10
         if (p.x > w + 10) p.x = -10
         if (p.y < -10) p.y = h + 10
@@ -197,7 +208,7 @@ export function HeroCanvas() {
         ctx.fill()
       }
 
-      // Draw connections
+      // Draw connections between nearby particles
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x
@@ -230,7 +241,9 @@ export function HeroCanvas() {
 
       // Keywords - always gently drifting, more visible near mouse
       const keywords = keywordsRef.current
-      for (const kw of keywords) {
+      for (let i = 0; i < keywords.length; i++) {
+        const kw = keywords[i]
+
         // Continuous gentle floating
         kw.drift += kw.driftSpeed
         kw.x = kw.baseX + Math.sin(kw.drift) * 12
@@ -252,8 +265,8 @@ export function HeroCanvas() {
 
         kw.opacity += (kw.targetOpacity - kw.opacity) * 0.04
 
-        if (kw.opacity > 0.005) {
-          ctx.font = "11px var(--font-mono, monospace)"
+        if (kw.opacity > 0.01) {
+          ctx.font = "11px monospace"
           ctx.fillStyle = `rgba(0, 0, 0, ${kw.opacity})`
           ctx.fillText(kw.text, kw.x, kw.y)
         }

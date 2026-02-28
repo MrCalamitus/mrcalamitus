@@ -56,7 +56,7 @@ const translations: Record<Locale, Record<string, string>> = {
     "projects.iaprep.title": "Iaprep",
     "projects.iaprep.subtitle": "Ed-Tech / IA",
     "projects.iaprep.description":
-      "Plataforma potenciada por IA con capacidades avanzadas de an\u00e1lisis, RAG y procesamiento de lenguaje natural.",
+      "Plataforma potenciada por IA con capacidades avanzadas de an\u00e1lisis, procesamiento de lenguaje natural y aprendizaje autom\u00e1tico.",
     "projects.upperbus.title": "Upperbus",
     "projects.upperbus.subtitle": "Movilidad Colectiva",
     "projects.upperbus.description":
@@ -150,7 +150,7 @@ const translations: Record<Locale, Record<string, string>> = {
     "projects.iaprep.title": "Iaprep",
     "projects.iaprep.subtitle": "Ed-Tech / AI",
     "projects.iaprep.description":
-      "AI-powered platform with advanced analysis capabilities, RAG, and natural language processing.",
+      "AI-powered platform with advanced analysis capabilities, natural language processing, and machine learning.",
     "projects.upperbus.title": "Upperbus",
     "projects.upperbus.subtitle": "Collective Mobility",
     "projects.upperbus.description":
@@ -201,7 +201,7 @@ const translations: Record<Locale, Record<string, string>> = {
   },
 }
 
-const I18nContext = createContext<I18nContextType | null>(null)
+const I18nContext = createContext<I18nContextType | undefined>(undefined)
 
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>("en")
@@ -211,8 +211,12 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const t = useCallback(
-    (key: string) => {
-      return translations[locale][key] || key
+    (key: string): string => {
+      const dict = translations[locale]
+      if (dict && typeof dict[key] === "string") {
+        return dict[key]
+      }
+      return key
     },
     [locale]
   )
@@ -224,8 +228,10 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   )
 }
 
-export function useI18n() {
+export function useI18n(): I18nContextType {
   const context = useContext(I18nContext)
-  if (!context) throw new Error("useI18n must be used within I18nProvider")
+  if (!context) {
+    throw new Error("useI18n must be used within an I18nProvider")
+  }
   return context
 }

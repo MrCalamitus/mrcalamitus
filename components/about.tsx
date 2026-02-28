@@ -7,6 +7,7 @@ export function About() {
 
   const renderP1 = () => {
     const text = t("about.p1")
+    if (!text || !text.includes("{link}")) return <p>{text}</p>
     const parts = text.split("{link}")
     return (
       <p>
@@ -26,6 +27,7 @@ export function About() {
 
   const renderP2 = () => {
     const text = t("about.p2")
+    if (!text) return null
     const replacements: Record<string, string> = {
       "{nodejs}": "Node.js",
       "{express}": "Express",
