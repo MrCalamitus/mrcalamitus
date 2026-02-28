@@ -26,7 +26,7 @@ const experiences: Experience[] = [
     companyKey: "experience.startups.company",
     companyUrl: null,
     descriptionKey: "experience.startups.description",
-    tags: ["NativeScript", "Node.js", "Firebase", "Product Leadership"],
+    tags: ["NativeScript", "Node.js", "Firebase", "Product Leadership", ""],
   },
   {
     periodKey: "experience.freelance.period",
@@ -34,7 +34,7 @@ const experiences: Experience[] = [
     companyKey: "experience.freelance.company",
     companyUrl: null,
     descriptionKey: "experience.freelance.description",
-    tags: ["Java", "MySQL", "Linux", "REST APIs"],
+    tags: ["Java", "Flash", "MySQL", "Linux", "REST APIs"],
   },
 ]
 
