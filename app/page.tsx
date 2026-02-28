@@ -9,20 +9,24 @@ import { Experience } from "@/components/experience"
 import { Skills } from "@/components/skills"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { ErrorBoundary } from "@/components/error-boundary"
 
 export default function Page() {
+  console.log("[v0] Page rendering")
   return (
-    <I18nProvider>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Skills />
-        <Contact />
-      </main>
-      <Footer />
-    </I18nProvider>
+    <ErrorBoundary>
+      <I18nProvider>
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Projects />
+          <Experience />
+          <Skills />
+          <Contact />
+        </main>
+        <Footer />
+      </I18nProvider>
+    </ErrorBoundary>
   )
 }

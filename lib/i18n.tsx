@@ -204,6 +204,7 @@ const translations: Record<Locale, Record<string, string>> = {
 const I18nContext = createContext<I18nContextType | undefined>(undefined)
 
 export function I18nProvider({ children }: { children: ReactNode }) {
+  console.log("[v0] I18nProvider mounting")
   const [locale, setLocale] = useState<Locale>("en")
 
   const toggleLocale = useCallback(() => {

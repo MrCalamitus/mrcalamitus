@@ -6,6 +6,7 @@ import { useI18n } from "@/lib/i18n"
 import { HeroCanvas } from "@/components/hero-canvas"
 
 export function Hero() {
+  console.log("[v0] Hero rendering")
   const { locale, t } = useI18n()
   const cvUrl = locale === "es" ? "/cv-luis-alberto-ortiz-meza.pdf" : "/cv-luis-alberto-ortiz-meza-en.pdf"
 
