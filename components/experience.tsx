@@ -1,36 +1,57 @@
-const experiences = [
+"use client"
+
+import { useI18n } from "@/lib/i18n"
+
+interface Experience {
+  periodKey: string
+  roleKey: string
+  companyKey: string
+  companyUrl: string | null
+  descriptionKey: string
+  tags: string[]
+}
+
+const experiences: Experience[] = [
   {
-    period: "2011 -- Presente",
-    role: "Co-fundador, Tech Lead & Full-Stack Developer",
-    company: "ZOGA mobile & IT",
+    periodKey: "experience.zoga.period",
+    roleKey: "experience.zoga.role",
+    companyKey: "experience.zoga.company",
     companyUrl: "https://zoga.com.mx",
-    description:
-      "Co-funde ZOGA junto con un amigo hace mas de 15 anos. Lidero el equipo tecnico y participo activamente en el desarrollo full-stack de proyectos web, mobile y soluciones IT. Defino la arquitectura de sistemas, gestiono infraestructura cloud en AWS con Terraform y mentorizo al equipo de desarrollo. Trabajo diario con Node.js, Express, Python, MySQL, Firebase y Oracle.",
-    tags: ["Node.js", "Express", "Python", "MySQL", "Firebase", "Oracle", "AWS", "Terraform"],
+    descriptionKey: "experience.zoga.description",
+    tags: ["Node.js", "Java", "MySQL", "Firebase", "Oracle", "AWS", "Terraform", "Docker", "OpenAI"],
   },
   {
-    period: "2009 -- 2011",
-    role: "Full-Stack Developer",
-    company: "Freelance / Proyectos Independientes",
+    periodKey: "experience.startups.period",
+    roleKey: "experience.startups.role",
+    companyKey: "experience.startups.company",
     companyUrl: null,
-    description:
-      "Desarrolle proyectos web y aplicaciones a medida para diversos clientes. Construi APIs, integre servicios de terceros y gane experiencia en multiples tecnologias que posteriormente aplique en la creacion de ZOGA.",
-    tags: ["Python", "JavaScript", "MySQL", "Linux"],
+    descriptionKey: "experience.startups.description",
+    tags: ["NativeScript", "Node.js", "Firebase", "Product Leadership"],
+  },
+  {
+    periodKey: "experience.freelance.period",
+    roleKey: "experience.freelance.role",
+    companyKey: "experience.freelance.company",
+    companyUrl: null,
+    descriptionKey: "experience.freelance.description",
+    tags: ["JavaScript", "MySQL", "Linux", "REST APIs"],
   },
 ]
 
 export function Experience() {
+  const { t } = useI18n()
+
   return (
-    <section id="experiencia" className="px-6 py-24" aria-label="Experiencia profesional">
+    <section id="experiencia" className="px-6 py-24" aria-label={t("experience.label")}>
       <div className="mx-auto max-w-3xl">
         <h2 className="text-sm font-medium tracking-widest uppercase text-muted-foreground">
-          Experiencia
+          {t("experience.title")}
         </h2>
         <div className="mt-6 h-px w-12 bg-foreground" aria-hidden="true" />
 
         <div className="mt-12 flex flex-col gap-12">
           {experiences.map((exp) => (
-            <div key={exp.role} className="group relative flex gap-8">
+            <div key={exp.roleKey} className="group relative flex gap-8">
               <div className="hidden md:flex flex-col items-center">
                 <div className="h-3 w-3 rounded-full border-2 border-foreground bg-background" />
                 <div className="w-px flex-1 bg-border" />
@@ -38,10 +59,10 @@ export function Experience() {
 
               <div className="flex-1">
                 <p className="text-xs font-mono tracking-wider text-muted-foreground">
-                  {exp.period}
+                  {t(exp.periodKey)}
                 </p>
                 <h3 className="mt-2 text-base font-semibold text-foreground">
-                  {exp.role}
+                  {t(exp.roleKey)}
                 </h3>
                 {exp.companyUrl ? (
                   <a
@@ -50,15 +71,15 @@ export function Experience() {
                     rel="noopener noreferrer"
                     className="text-sm font-medium text-muted-foreground underline underline-offset-4 decoration-border hover:decoration-foreground hover:text-foreground transition-colors"
                   >
-                    {exp.company}
+                    {t(exp.companyKey)}
                   </a>
                 ) : (
                   <p className="text-sm font-medium text-muted-foreground">
-                    {exp.company}
+                    {t(exp.companyKey)}
                   </p>
                 )}
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {exp.description}
+                  {t(exp.descriptionKey)}
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {exp.tags.map((tag) => (

@@ -7,34 +7,40 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 export const metadata: Metadata = {
-  title: 'Luis Alberto Ortiz Meza | Co-fundador & Tech Lead | Full-Stack Developer',
-  description: 'Luis Alberto Ortiz Meza - Co-fundador y Tech Lead en ZOGA. +15 anos de experiencia en desarrollo full-stack con Node.js, Express, Python, MySQL, Firebase, Oracle, AWS y Terraform. Especialista en arquitectura cloud e infraestructura como codigo.',
+  title: 'Luis Alberto Ortiz Meza | CTO & Solution Architect | Full-Stack Developer',
+  description: 'Luis Alberto Ortiz Meza - CTO y Co-fundador de ZOGA. +15 a\u00f1os de experiencia en desarrollo full-stack con Node.js, Express, Java, MySQL, Firebase, Oracle, AWS y Terraform. Especialista en arquitectura cloud, ciberseguridad e integraci\u00f3n de IA.',
   keywords: [
     'Luis Alberto Ortiz Meza',
+    'CTO', 'Solution Architect',
     'Full-Stack Developer',
-    'Tech Lead',
     'Co-fundador ZOGA',
-    'Node.js', 'Express', 'Python',
+    'Node.js', 'Express', 'Java',
     'MySQL', 'Firebase', 'Oracle',
     'AWS', 'Terraform',
     'Software Engineer Mexico',
     'Cloud Architecture',
     'Infrastructure as Code',
-    'mrcalamitus',
+    'Cybersecurity',
+    'OpenAI', 'RAG', 'AI Integration',
+    'NativeScript',
+    'mrcalamitus', 'MrCalamitus',
+    'Certisep', 'D\u00edgipris', 'Iaprep',
+    'Upperbus', 'Rideupp',
   ],
   authors: [{ name: 'Luis Alberto Ortiz Meza', url: 'https://www.linkedin.com/in/mrcalamitus' }],
   creator: 'Luis Alberto Ortiz Meza',
   openGraph: {
     type: 'website',
     locale: 'es_MX',
-    title: 'Luis Alberto Ortiz Meza | Co-fundador & Tech Lead en ZOGA',
-    description: 'Full-Stack Developer con +15 anos de experiencia. Node.js, Python, AWS, Terraform, MySQL, Firebase, Oracle.',
+    alternateLocale: 'en_US',
+    title: 'Luis Alberto Ortiz Meza | CTO & Solution Architect en ZOGA',
+    description: 'Full-Stack Developer con +15 a\u00f1os de experiencia. Node.js, Java, AWS, Terraform, MySQL, Firebase, Oracle. Especialista en IA y Ciberseguridad.',
     siteName: 'Luis Alberto Ortiz Meza - Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Luis Alberto Ortiz Meza | Co-fundador & Tech Lead en ZOGA',
-    description: 'Full-Stack Developer con +15 anos de experiencia. Node.js, Python, AWS, Terraform, MySQL, Firebase, Oracle.',
+    title: 'Luis Alberto Ortiz Meza | CTO & Solution Architect en ZOGA',
+    description: 'Full-Stack Developer con +15 a\u00f1os de experiencia. Node.js, Java, AWS, Terraform, MySQL, Firebase, Oracle.',
   },
   robots: {
     index: true,
@@ -68,40 +74,65 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: '#f5f5f5',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Luis Alberto Ortiz Meza',
-  alternateName: 'mrcalamitus',
-  jobTitle: 'Co-fundador & Tech Lead',
+  alternateName: 'MrCalamitus',
+  jobTitle: 'CTO & Solution Architect',
+  description: 'Arquitecto de Soluciones Cloud y L\u00edder T\u00e9cnico con 15 a\u00f1os de experiencia dise\u00f1ando e implementando sistemas de gran escala. Especialista en la convergencia de Software, Hardware e IA.',
   worksFor: {
     '@type': 'Organization',
     name: 'ZOGA mobile & IT',
     url: 'https://zoga.com.mx',
   },
   url: 'https://www.linkedin.com/in/mrcalamitus',
+  email: 'luis@zoga.com.mx',
   sameAs: [
     'https://www.linkedin.com/in/mrcalamitus',
     'https://github.com/mrcalamitus',
     'https://zoga.com.mx',
   ],
   knowsAbout: [
-    'Node.js', 'Express.js', 'Python', 'JavaScript', 'TypeScript',
-    'MySQL', 'Firebase', 'Oracle Database',
+    'Node.js', 'Express.js', 'Java', 'JavaScript', 'TypeScript',
+    'NativeScript', 'MySQL', 'Firebase', 'Oracle Database',
     'Amazon Web Services', 'AWS Cloud Practitioner',
     'Terraform', 'Infrastructure as Code',
     'Docker', 'CI/CD', 'Linux',
     'REST APIs', 'Microservices Architecture',
     'Full-Stack Development', 'Mobile Development',
     'Cloud Architecture', 'DevOps',
+    'OpenAI', 'LLM', 'RAG', 'AI Integration',
+    'Cybersecurity', 'Security by Design',
     'Team Leadership', 'Technical Architecture',
+    'IoT', 'Telemetry',
   ],
-  hasCredential: {
-    '@type': 'EducationalOccupationalCredential',
-    name: 'AWS Cloud Practitioner',
-    credentialCategory: 'Certificate',
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'AWS Cloud Practitioner',
+      credentialCategory: 'Certificate',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'Maestr\u00eda en Ciberseguridad',
+      credentialCategory: 'Degree',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'Ingenier\u00eda de Software / Computaci\u00f3n',
+      credentialCategory: 'Degree',
+    },
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'CDMX / M\u00e9rida',
+    addressCountry: 'MX',
   },
 }
 
@@ -111,7 +142,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className="bg-background">
       <head>
         <script
           type="application/ld+json"

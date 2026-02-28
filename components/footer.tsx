@@ -1,12 +1,18 @@
+"use client"
+
+import { useI18n } from "@/lib/i18n"
+
 export function Footer() {
+  const { t } = useI18n()
+
   return (
     <footer className="border-t border-border px-6 py-8">
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 md:flex-row">
         <p className="text-xs text-muted-foreground">
-          {`\u00A9 ${new Date().getFullYear()} Luis Alberto Ortiz Meza. Todos los derechos reservados.`}
+          {`\u00A9 ${new Date().getFullYear()} Luis Alberto Ortiz Meza. ${t("footer.rights")}`}
         </p>
         <p className="text-xs text-muted-foreground">
-          Hecho con Next.js y Tailwind CSS
+          {t("footer.madeWith")}
         </p>
       </div>
     </footer>
