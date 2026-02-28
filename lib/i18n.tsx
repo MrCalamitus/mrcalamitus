@@ -36,7 +36,7 @@ const translations: Record<Locale, Record<string, string>> = {
     "about.title": "Sobre m\u00ed",
     "about.label": "Sobre m\u00ed",
     "about.p1":
-      "Soy Luis Alberto Ortiz Meza, CTO y co-fundador de {link}, una empresa de desarrollo de software que cre\u00e9 junto con un amigo hace m\u00e1s de 15 a\u00f1os. Nos especializamos en desarrollo mobile, web, soluciones IT e integraci\u00f3n de IA para empresas.",
+      "Soy Luis Alberto Ortiz Meza, CTO y co-fundador de {link}, una empresa de desarrollo de software con 14 a\u00f1os de experiencia. Nos especializamos en desarrollo mobile, web, soluciones IT e integraci\u00f3n de IA para empresas.",
     "about.p2":
       "Mi stack principal gira en torno a {nodejs} y {express} para backend, {java} para servicios empresariales, y bases de datos como {mysql}, {firebase} y {oracle}. En infraestructura trabajo con {aws} (cuento con la certificaci\u00f3n {awsCert}) y gestiono la infraestructura como c\u00f3digo con {terraform}. Adem\u00e1s, integro soluciones de IA con {openai} y t\u00e9cnicas de {rag}.",
     "about.p3":
@@ -130,7 +130,7 @@ const translations: Record<Locale, Record<string, string>> = {
     "about.title": "About Me",
     "about.label": "About me",
     "about.p1":
-      "I\u2019m Luis Alberto Ortiz Meza, CTO and co-founder of {link}, a software development company I started with a friend over 15 years ago. We specialize in mobile development, web solutions, IT infrastructure, and AI integration for businesses.",
+      "I\u2019m Luis Alberto Ortiz Meza, CTO and co-founder of {link}, a software development company with 14 years of experience. We specialize in mobile development, web solutions, IT infrastructure, and AI integration for businesses.",
     "about.p2":
       "My core stack revolves around {nodejs} and {express} for backend, {java} for enterprise services, and databases like {mysql}, {firebase}, and {oracle}. For infrastructure, I work with {aws} (holding the {awsCert} certification) and manage infrastructure as code with {terraform}. I also integrate AI solutions using {openai} and {rag} techniques.",
     "about.p3":
@@ -204,7 +204,7 @@ const translations: Record<Locale, Record<string, string>> = {
 const I18nContext = createContext<I18nContextType | null>(null)
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<Locale>("es")
+  const [locale, setLocale] = useState<Locale>("en")
 
   const toggleLocale = useCallback(() => {
     setLocale((prev) => (prev === "es" ? "en" : "es"))

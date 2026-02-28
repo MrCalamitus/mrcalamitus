@@ -6,7 +6,8 @@ import { useI18n } from "@/lib/i18n"
 import { HeroCanvas } from "@/components/hero-canvas"
 
 export function Hero() {
-  const { t } = useI18n()
+  const { locale, t } = useI18n()
+  const cvUrl = locale === "es" ? "/cv-luis-alberto-ortiz-meza.pdf" : "/cv-luis-alberto-ortiz-meza-en.pdf"
 
   return (
     <section className="relative flex min-h-screen items-center justify-center px-6 pt-20 overflow-hidden" aria-label={t("hero.presentation")}>
@@ -68,7 +69,7 @@ export function Hero() {
           </div>
 
           <a
-            href="/cv-luis-alberto-ortiz-meza.pdf"
+            href={cvUrl}
             download
             className="flex items-center gap-2 rounded-full border border-foreground bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-colors hover:bg-foreground/90 min-h-[44px]"
           >
