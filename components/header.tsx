@@ -17,12 +17,11 @@ export function Header() {
   ]
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--background)]/95 backdrop-blur-sm">
+    <header className="fixed top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <a
           href="#"
-          className="font-[var(--font-jetbrains)] text-sm font-semibold tracking-tight text-[var(--foreground)]"
-          style={{ fontFamily: "var(--font-jetbrains), monospace" }}
+          className="font-mono text-sm font-semibold tracking-tight text-foreground"
         >
           @MrCalamitus
         </a>
@@ -32,14 +31,14 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-[var(--muted-foreground)] transition-colors hover:text-[var(--foreground)]"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </a>
           ))}
           <button
             onClick={() => setLocale(locale === "en" ? "es" : "en")}
-            className="flex items-center gap-1.5 rounded-full bg-[var(--secondary)] px-3 py-1.5 text-xs font-medium text-[var(--foreground)] transition-colors hover:bg-[var(--muted)]"
+            className="flex items-center gap-1.5 rounded-full bg-secondary px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:bg-muted"
             aria-label={`Switch to ${locale === "en" ? "Spanish" : "English"}`}
           >
             <Globe className="h-3.5 w-3.5" />
@@ -50,7 +49,7 @@ export function Header() {
         <div className="flex items-center gap-3 md:hidden">
           <button
             onClick={() => setLocale(locale === "en" ? "es" : "en")}
-            className="flex items-center gap-1 rounded-full bg-[var(--secondary)] px-2.5 py-1.5 text-xs font-medium"
+            className="flex items-center gap-1 rounded-full bg-secondary px-2.5 py-1.5 text-xs font-medium text-foreground"
             aria-label={`Switch to ${locale === "en" ? "Spanish" : "English"}`}
           >
             <Globe className="h-3.5 w-3.5" />
@@ -59,7 +58,7 @@ export function Header() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
-            className="text-[var(--foreground)]"
+            className="text-foreground"
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -67,13 +66,13 @@ export function Header() {
       </nav>
 
       {isOpen && (
-        <div className="border-t border-[var(--border)] bg-[var(--background)] px-6 py-4 md:hidden">
+        <div className="border-t border-border bg-background px-6 py-4 md:hidden">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block py-2 text-sm text-[var(--muted-foreground)] transition-colors hover:text-[var(--foreground)]"
+              className="block py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </a>

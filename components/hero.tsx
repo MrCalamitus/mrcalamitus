@@ -13,7 +13,7 @@ export function Hero() {
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20">
       <HeroCanvas />
       <div className="relative z-10 flex flex-col items-center text-center">
-        <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-[var(--border)] shadow-sm">
+        <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-border shadow-sm">
           <Image
             src="/images/avatar.jpg"
             alt="Luis Alberto Ortiz Meza"
@@ -24,14 +24,14 @@ export function Hero() {
         </div>
 
         <div className="mt-6">
-          <p className="text-sm font-medium text-[var(--accent)]">{t("hero.greeting")}</p>
-          <h1 className="mt-2 text-4xl font-bold tracking-tight text-[var(--foreground)] md:text-5xl">
+          <p className="text-sm font-medium text-accent">{t("hero.greeting")}</p>
+          <h1 className="mt-2 text-4xl font-bold tracking-tight text-foreground md:text-5xl">
             {t("hero.name")}
           </h1>
-          <p className="mt-2 text-lg font-medium text-[var(--muted-foreground)]">
+          <p className="mt-2 text-lg font-medium text-muted-foreground">
             {t("hero.role")}
           </p>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[var(--muted-foreground)]">
+          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
             {t("hero.subtitle")}
           </p>
         </div>
@@ -42,7 +42,7 @@ export function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub de Luis Alberto Ortiz Meza"
-            className="rounded-full bg-[var(--secondary)] p-2.5 text-[var(--muted-foreground)] transition-colors hover:bg-[var(--muted)] hover:text-[var(--foreground)]"
+            className="rounded-full bg-secondary p-2.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
           >
             <Github className="h-5 w-5" />
           </a>
@@ -51,14 +51,14 @@ export function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn de Luis Alberto Ortiz Meza"
-            className="rounded-full bg-[var(--secondary)] p-2.5 text-[var(--muted-foreground)] transition-colors hover:bg-[var(--muted)] hover:text-[var(--foreground)]"
+            className="rounded-full bg-secondary p-2.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
           >
             <Linkedin className="h-5 w-5" />
           </a>
           <a
             href="mailto:luis@zoga.com.mx"
             aria-label="Enviar email a Luis Alberto Ortiz Meza"
-            className="rounded-full bg-[var(--secondary)] p-2.5 text-[var(--muted-foreground)] transition-colors hover:bg-[var(--muted)] hover:text-[var(--foreground)]"
+            className="rounded-full bg-secondary p-2.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
           >
             <Mail className="h-5 w-5" />
           </a>
@@ -67,14 +67,14 @@ export function Hero() {
         <div className="mt-6 flex items-center gap-3">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-[var(--primary)] px-6 py-2.5 text-sm font-medium text-[var(--primary-foreground)] transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             {t("hero.contact")}
           </a>
           <a
             href={cvUrl}
             download
-            className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)] px-6 py-2.5 text-sm font-medium text-[var(--foreground)] transition-colors hover:bg-[var(--secondary)]"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
           >
             <Download className="h-4 w-4" />
             {t("hero.cv")}
@@ -83,13 +83,12 @@ export function Hero() {
 
         <a
           href="#about"
-          className="mt-12 animate-bounce text-[var(--muted-foreground)]"
+          className="mt-12 animate-bounce text-muted-foreground"
           aria-label="Scroll down"
         >
           <ArrowDown className="h-5 w-5" />
         </a>
       </div>
-      {/* Screen-reader keywords for ATS */}
       <span className="sr-only">
         Luis Alberto Ortiz Meza, MrCalamitus, CTO, Co-founder, Tech Lead, ZOGA, Full-Stack Developer,
         Node.js, Java, AWS, Terraform, MySQL, Firebase, Oracle, NativeScript, Docker, Kubernetes,

@@ -6,15 +6,28 @@ const experiences = [
   {
     periodEs: "2011 \u2014 Presente",
     periodEn: "2011 \u2014 Present",
-    titleEs: "CTO & Co-fundador",
-    titleEn: "CTO & Co-founder",
-    company: "ZOGA",
+    titleEs: "CTO, Co-fundador & Solution Architect",
+    titleEn: "CTO, Co-founder & Solution Architect",
+    company: "ZOGA mobile & IT",
     companyUrl: "https://zoga.com.mx",
     descEs:
-      "Co-fund\u00e9 y lidero la direcci\u00f3n t\u00e9cnica de ZOGA, una empresa de desarrollo de software con 14 a\u00f1os de experiencia. Arquitectura cloud en AWS con Terraform, liderazgo de equipos, y desarrollo de plataformas cr\u00edticas para gobierno, movilidad y educaci\u00f3n.",
+      "Co-fund\u00e9 ZOGA con un amigo. Lidero la visi\u00f3n t\u00e9cnica, la arquitectura de soluciones y el equipo de desarrollo. Dise\u00f1o e implemento sistemas a gran escala enfocados en la convergencia de Software, Hardware e IA. Gesti\u00f3n de infraestructura cloud en AWS con Terraform, desarrollo full-stack con Node.js, Java, MySQL, Firebase y Oracle. Productos liderados: Certisep, D\u00edgipris, Iaprep.",
     descEn:
-      "Co-founded and lead the technical direction at ZOGA, a software development company with 14 years of experience. Cloud architecture on AWS with Terraform, team leadership, and development of mission-critical platforms for government, mobility, and education.",
-    tags: ["Node.js", "AWS", "Terraform", "MySQL", "Firebase", "Team Leadership"],
+      "Co-founded ZOGA with a friend. I lead the technical vision, solution architecture, and development team. Design and implement large-scale systems focused on the convergence of Software, Hardware, and AI. Cloud infrastructure management on AWS with Terraform, full-stack development with Node.js, Java, MySQL, Firebase, and Oracle. Products led: Certisep, D\u00edgipris, Iaprep.",
+    tags: ["Node.js", "Java", "MySQL", "Firebase", "Oracle", "AWS", "Terraform", "Docker", "OpenAI"],
+  },
+  {
+    periodEs: "2013 \u2014 2017",
+    periodEn: "2013 \u2014 2017",
+    titleEs: "Co-fundador & Tech Lead",
+    titleEn: "Co-founder & Tech Lead",
+    company: "Upperbus & Rideupp",
+    companyUrl: "",
+    descEs:
+      "Co-fund\u00e9 dos startups de movilidad urbana. Liderazgo de producto, desarrollo de comunidad, gesti\u00f3n de equipos multidisciplinarios, iteraci\u00f3n \u00e1gil y adaptaci\u00f3n a regulaciones locales. Experiencia real navegando la incertidumbre y el pivoteo estrat\u00e9gico.",
+    descEn:
+      "Co-founded two urban mobility startups. Product leadership, community development, multidisciplinary team management, agile iteration, and adaptation to local regulations. Real-world experience navigating uncertainty and strategic pivoting.",
+    tags: ["NativeScript", "Node.js", "Firebase", "Product Leadership"],
   },
   {
     periodEs: "2009 \u2014 2011",
@@ -24,10 +37,10 @@ const experiences = [
     company: "Freelance",
     companyUrl: "",
     descEs:
-      "Desarrollo de aplicaciones web y sistemas a la medida para diversos clientes. Implementaci\u00f3n de APIs REST, bases de datos y despliegues en servidores Linux.",
+      "Desarrollo de aplicaciones web y sistemas a la medida para diversos clientes. Implementaci\u00f3n de APIs REST, dise\u00f1o de bases de datos y despliegues en servidores Linux.",
     descEn:
-      "Web application development and custom systems for various clients. REST API implementation, database design, and Linux server deployments.",
-    tags: ["Java", "MySQL", "Linux", "REST APIs"],
+      "Developed custom web projects and applications for various clients. Built APIs, integrated third-party services, and gained experience in multiple technologies later applied in creating ZOGA.",
+    tags: ["Java", "Flash", "MySQL", "Linux", "REST APIs"],
   },
 ]
 
@@ -37,7 +50,7 @@ export function Experience() {
   return (
     <section id="experience" className="px-6 py-24">
       <div className="mx-auto max-w-3xl">
-        <h2 className="text-2xl font-bold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-2xl font-bold tracking-tight text-foreground">
           {t("experience.title")}
         </h2>
         <div className="mt-10 space-y-10">
@@ -46,32 +59,28 @@ export function Experience() {
             const title = locale === "es" ? exp.titleEs : exp.titleEn
             const desc = locale === "es" ? exp.descEs : exp.descEn
             return (
-              <div key={i} className="relative border-l-2 border-[var(--border)] pl-6">
-                <div className="absolute -left-[7px] top-1.5 h-3 w-3 rounded-full border-2 border-[var(--accent)] bg-[var(--background)]" />
-                <p className="text-xs font-medium text-[var(--accent)]">{period}</p>
-                <h3 className="mt-1 text-lg font-semibold text-[var(--foreground)]">{title}</h3>
+              <div key={i} className="relative border-l-2 border-border pl-6">
+                <div className="absolute -left-[7px] top-1.5 h-3 w-3 rounded-full border-2 border-accent bg-background" />
+                <p className="text-xs font-medium text-accent">{period}</p>
+                <h3 className="mt-1 text-lg font-semibold text-foreground">{title}</h3>
                 {exp.companyUrl ? (
                   <a
                     href={exp.companyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-[var(--accent)] underline underline-offset-4"
+                    className="text-sm font-medium text-accent underline underline-offset-4"
                   >
                     {exp.company}
                   </a>
                 ) : (
-                  <p className="text-sm font-medium text-[var(--muted-foreground)]">
-                    {exp.company}
-                  </p>
+                  <p className="text-sm font-medium text-muted-foreground">{exp.company}</p>
                 )}
-                <p className="mt-2 text-sm leading-relaxed text-[var(--muted-foreground)]">
-                  {desc}
-                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {exp.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-[var(--secondary)] px-3 py-1 text-xs font-medium text-[var(--muted-foreground)]"
+                      className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-muted-foreground"
                     >
                       {tag}
                     </span>

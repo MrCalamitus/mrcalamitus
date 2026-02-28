@@ -52,12 +52,13 @@ export function HeroCanvas() {
 
     const resize = () => {
       const rect = parent.getBoundingClientRect()
+      if (rect.width === 0 || rect.height === 0) return rect
       const dpr = window.devicePixelRatio || 1
       canvas.width = rect.width * dpr
       canvas.height = rect.height * dpr
       canvas.style.width = `${rect.width}px`
       canvas.style.height = `${rect.height}px`
-      ctx.scale(dpr, dpr)
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
       return rect
     }
 
@@ -65,7 +66,6 @@ export function HeroCanvas() {
     const w = () => rect.width
     const h = () => rect.height
 
-    // Create particles
     const particles: Particle[] = Array.from({ length: 50 }, () => {
       const x = Math.random() * rect.width
       const y = Math.random() * rect.height
@@ -80,7 +80,6 @@ export function HeroCanvas() {
       }
     })
 
-    // Create floating keywords
     const keywords: Keyword[] = KEYWORDS.map((text) => ({
       text,
       x: Math.random() * rect.width,
@@ -119,16 +118,17 @@ export function HeroCanvas() {
       time += 0.016
       const cw = w()
       const ch = h()
+      if (cw === 0 || ch === 0) {
+        animationId = requestAnimationFrame(draw)
+        return
+      }
       ctx.clearRect(0, 0, cw, ch)
 
-      // Update & draw particles
       for (const p of particles) {
-        // Orbit around base position
         p.angle += p.orbitSpeed
         const targetX = p.baseX + Math.cos(p.angle) * p.orbitRadius
         const targetY = p.baseY + Math.sin(p.angle) * p.orbitRadius
 
-        // Mouse repulsion
         const dx = p.x - mouseX
         const dy = p.y - mouseY
         const dist = Math.sqrt(dx * dx + dy * dy)
@@ -139,7 +139,6 @@ export function HeroCanvas() {
           p.vy += (dy / dist) * force * 3
         }
 
-        // Spring back to orbit position
         p.vx += (targetX - p.x) * 0.02
         p.vy += (targetY - p.y) * 0.02
         p.vx *= 0.92
@@ -147,7 +146,6 @@ export function HeroCanvas() {
         p.x += p.vx
         p.y += p.vy
 
-        // Wrap around edges
         if (p.x < -20) p.x = cw + 20
         if (p.x > cw + 20) p.x = -20
         if (p.y < -20) p.y = ch + 20
@@ -159,7 +157,6 @@ export function HeroCanvas() {
         ctx.fill()
       }
 
-      // Draw connections between close particles
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const a = particles[i]
@@ -176,7 +173,6 @@ export function HeroCanvas() {
         }
       }
 
-      // Mouse glow
       if (mouseX > 0 && mouseY > 0) {
         const gradient = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, mouseRadius)
         gradient.addColorStop(0, "rgba(0, 102, 204, 0.06)")
@@ -187,7 +183,6 @@ export function HeroCanvas() {
         ctx.fill()
       }
 
-      // Keywords
       for (const kw of keywords) {
         kw.x += kw.vx
         kw.y += kw.vy
@@ -203,7 +198,7 @@ export function HeroCanvas() {
 
         kw.opacity += (targetOpacity - kw.opacity) * 0.05
 
-        ctx.font = "11px var(--font-jetbrains), monospace"
+        ctx.font = "11px monospace"
         ctx.fillStyle = `rgba(0, 102, 204, ${kw.opacity})`
         ctx.fillText(kw.text, kw.x, kw.y)
       }

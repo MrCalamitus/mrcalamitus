@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Linkedin, Github } from "lucide-react"
+import { Mail, Linkedin, Github, MapPin } from "lucide-react"
 import { useI18n } from "@/lib/i18n"
 
 export function Contact() {
@@ -14,26 +14,26 @@ export function Contact() {
       href: "mailto:luis@zoga.com.mx",
     },
     {
-      icon: Linkedin,
-      label: t("contact.linkedin"),
-      value: "linkedin.com/in/mrcalamitus",
-      href: "https://linkedin.com/in/mrcalamitus",
-    },
-    {
       icon: Github,
       label: t("contact.github"),
       value: "github.com/mrcalamitus",
       href: "https://github.com/mrcalamitus",
+    },
+    {
+      icon: Linkedin,
+      label: t("contact.linkedin"),
+      value: "linkedin.com/in/mrcalamitus",
+      href: "https://linkedin.com/in/mrcalamitus",
     },
   ]
 
   return (
     <section id="contact" className="px-6 py-24">
       <div className="mx-auto max-w-3xl">
-        <h2 className="text-2xl font-bold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-2xl font-bold tracking-tight text-foreground">
           {t("contact.title")}
         </h2>
-        <p className="mt-2 text-base text-[var(--muted-foreground)]">{t("contact.subtitle")}</p>
+        <p className="mt-2 text-base text-muted-foreground">{t("contact.subtitle")}</p>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-3">
           {channels.map((ch) => (
@@ -42,15 +42,20 @@ export function Contact() {
               href={ch.href}
               target={ch.href.startsWith("mailto") ? undefined : "_blank"}
               rel={ch.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-              className="flex flex-col items-center gap-3 rounded-lg border border-[var(--border)] bg-[var(--card)] p-6 text-center transition-shadow hover:shadow-md"
+              className="flex flex-col items-center gap-3 rounded-lg border border-border bg-card p-6 text-center transition-shadow hover:shadow-md"
             >
-              <ch.icon className="h-6 w-6 text-[var(--accent)]" />
+              <ch.icon className="h-6 w-6 text-accent" />
               <div>
-                <p className="text-sm font-medium text-[var(--foreground)]">{ch.label}</p>
-                <p className="mt-1 text-xs text-[var(--muted-foreground)]">{ch.value}</p>
+                <p className="text-sm font-medium text-foreground">{ch.label}</p>
+                <p className="mt-1 text-xs text-muted-foreground">{ch.value}</p>
               </div>
             </a>
           ))}
+        </div>
+
+        <div className="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+          <MapPin className="h-4 w-4" />
+          <span>Mexico City / Merida, Mexico</span>
         </div>
       </div>
     </section>

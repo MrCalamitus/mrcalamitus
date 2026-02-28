@@ -13,10 +13,10 @@ export function About() {
   return (
     <section id="about" className="px-6 py-24">
       <div className="mx-auto max-w-3xl">
-        <h2 className="text-2xl font-bold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-2xl font-bold tracking-tight text-foreground">
           {t("about.title")}
         </h2>
-        <div className="mt-6 space-y-4 text-base leading-relaxed text-[var(--muted-foreground)]">
+        <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
           <p>
             {hasLink ? (
               <>
@@ -25,9 +25,9 @@ export function About() {
                   href="https://zoga.com.mx"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium text-[var(--accent)] underline underline-offset-4"
+                  className="font-medium text-accent underline underline-offset-4"
                 >
-                  ZOGA
+                  ZOGA mobile {"&"} IT
                 </a>
                 {parts[1]}
               </>
@@ -38,7 +38,7 @@ export function About() {
           <p>{t("about.p2")}</p>
           <p>{t("about.p3")}</p>
         </div>
-        <div className="mt-6 flex items-center gap-2 text-sm text-[var(--muted-foreground)]">
+        <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
           <MapPin className="h-4 w-4" />
           <span>{t("about.location")}</span>
         </div>
