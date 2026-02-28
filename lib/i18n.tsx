@@ -71,7 +71,7 @@ const translations: Record<Locale, Record<string, string>> = {
     "experience.zoga.role": "CTO, Co-fundador & Solution Architect",
     "experience.zoga.company": "ZOGA mobile & IT",
     "experience.zoga.description":
-      "Co-fund\u00e9 ZOGA junto con un amigo. Lidero la visi\u00f3n t\u00e9cnica, la arquitectura de soluciones y el equipo de desarrollo. Dise\u00f1o e implemento sistemas de gran escala con enfoque en la convergencia de Software, Hardware e IA. Gesti\u00f3n de infraestructura cloud en AWS con Terraform, desarrollo full-stack con Node.js, Java, MySQL, Firebase y Oracle. Productos liderados: Certisep, D\u00edgipris, Iaprep.",
+      "Co-fundador en ZOGA. Lidero la visi\u00f3n t\u00e9cnica, la arquitectura de soluciones y el equipo de desarrollo. Dise\u00f1o e implemento sistemas de gran escala con enfoque en la convergencia de Software, Hardware e IA. Gesti\u00f3n de infraestructura cloud en AWS con Terraform, desarrollo full-stack con Node.js, Java, MySQL, Firebase y Oracle. Productos liderados: Certisep, D\u00edgipris, Iaprep.",
     "experience.startups.period": "2013 \u2014 2017",
     "experience.startups.role": "Co-fundador & Tech Lead",
     "experience.startups.company": "Upperbus & Rideupp",
