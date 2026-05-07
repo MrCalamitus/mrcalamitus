@@ -27,7 +27,7 @@ const translations = {
     "about.p1":
       "Soy Luis Alberto Ortiz Meza, co-fundador y CTO de {link}, donde lidero estrategia técnica, equipo y la integración de IA en productos para sectores regulados. En los últimos 3 años he enfocado mi trabajo en llevar IA generativa a producción: no demos, sino sistemas que sostienen operaciones reales.",
     "about.p2":
-      "He liderado equipos multidisciplinarios, diseñado arquitecturas cloud sobre AWS con Terraform, y construido sistemas críticos para gobierno (COFEPRIS), educación superior, movilidad urbana y seguridad. Cofundé dos startups de movilidad (Upperbus, Rideupp) antes de consolidar ZOGA como plataforma de productos propios.",
+      "He liderado equipos multidisciplinarios, diseñado arquitecturas cloud sobre AWS con Terraform, y construido sistemas críticos para gobierno (COFEPRIS), educación superior, movilidad urbana y seguridad. También cofundé UPPERBUS, empresa de movilidad detrás de Upperbus y Rideupp.",
     "about.p3":
       "Hoy busco roles de liderazgo donde pueda combinar 14 años de criterio técnico con estrategia de IA aplicada — Head of Engineering, Head of AI, VP Tech, o advisory. Maestría en Ciberseguridad. Basado en México, abierto a remoto global.",
     "about.location": "CDMX / Mérida, México",
@@ -91,7 +91,7 @@ const translations = {
     "about.p1":
       "I'm Luis Alberto Ortiz Meza, co-founder and CTO of {link}, where I lead technical strategy, team, and AI integration in products for regulated sectors. In the past 3 years I've focused on bringing generative AI to production: not demos, but systems that sustain real operations.",
     "about.p2":
-      "I've led multidisciplinary teams, designed cloud architectures on AWS with Terraform, and built mission-critical systems for government (COFEPRIS), higher education, urban mobility, and security. I co-founded two mobility startups (Upperbus, Rideupp) before consolidating ZOGA as a platform for our own products.",
+      "I've led multidisciplinary teams, designed cloud architectures on AWS with Terraform, and built mission-critical systems for government (COFEPRIS), higher education, urban mobility, and security. I also co-founded UPPERBUS, the mobility company behind Upperbus and Rideupp.",
     "about.p3":
       "Today I'm looking for leadership roles where I can combine 14 years of technical judgment with applied AI strategy — Head of Engineering, Head of AI, VP Tech, or advisory. Master's in Cybersecurity. Based in Mexico, open to global remote.",
     "about.location": "Mexico City / Merida, Mexico",
