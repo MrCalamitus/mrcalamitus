@@ -4,43 +4,43 @@ import { useI18n } from "@/lib/i18n"
 
 const experiences = [
   {
-    periodEs: "2011 \u2014 Presente",
-    periodEn: "2011 \u2014 Present",
-    titleEs: "CTO, Co-fundador & Solution Architect",
-    titleEn: "CTO, Co-founder & Solution Architect",
+    periodEs: "2011 — Presente",
+    periodEn: "2011 — Present",
+    titleEs: "Co-fundador, CTO & Head of AI",
+    titleEn: "Co-founder, CTO & Head of AI",
     company: "ZOGA mobile & IT",
     companyUrl: "https://zoga.com.mx",
     descEs:
-      "Co-fund\u00e9 ZOGA con un amigo. Lidero la visi\u00f3n t\u00e9cnica, la arquitectura de soluciones y el equipo de desarrollo. Dise\u00f1o e implemento sistemas a gran escala enfocados en la convergencia de Software, Hardware e IA. Gesti\u00f3n de infraestructura cloud en AWS con Terraform, desarrollo full-stack con Node.js, Java, MySQL, Firebase y Oracle. Productos liderados: Certisep, D\u00edgipris, Iaprep.",
+      "Co-fundé ZOGA y lidero la estrategia técnica, el equipo de ingeniería y la apuesta de IA aplicada de la compañía. Diseño arquitecturas cloud sobre AWS con Terraform y dirijo el desarrollo de productos propios en sectores regulados (gobierno, salud, educación). En los últimos 3 años, he liderado la transición de la empresa hacia IA aplicada: integración de LLMs en productos, frameworks internos de adopción y criterios de governance. Productos liderados: Certisep (SaaS de títulos electrónicos para educación), Iaprep (predicción de números escritos a mano con IA).",
     descEn:
-      "Co-founded ZOGA with a friend. I lead the technical vision, solution architecture, and development team. Design and implement large-scale systems focused on the convergence of Software, Hardware, and AI. Cloud infrastructure management on AWS with Terraform, full-stack development with Node.js, Java, MySQL, Firebase, and Oracle. Products led: Certisep, D\u00edgipris, Iaprep.",
-    tags: ["Node.js", "Java", "MySQL", "Firebase", "Oracle", "AWS", "Terraform", "Docker", "OpenAI"],
+      "Co-founded ZOGA and lead the technical strategy, engineering team, and the company's applied AI initiative. I design cloud architectures on AWS with Terraform and direct the development of our own products in regulated sectors (government, health, education). In the last 3 years, I've led the company's transition toward applied AI: LLM integration in products, internal adoption frameworks, and governance criteria. Products led: Certisep (electronic degree SaaS for education), Iaprep (AI-powered handwritten number prediction).",
+    tags: ["AI Strategy", "LLMs", "Engineering Leadership", "Cloud Architecture", "AWS", "Terraform", "Node.js", "Python"],
   },
   {
-    periodEs: "2013 \u2014 2017",
-    periodEn: "2013 \u2014 2017",
-    titleEs: "Co-fundador & Tech Lead",
-    titleEn: "Co-founder & Tech Lead",
+    periodEs: "2013 — 2017",
+    periodEn: "2013 — 2017",
+    titleEs: "Co-fundador & Product Lead",
+    titleEn: "Co-founder & Product Lead",
     company: "Upperbus & Rideupp",
     companyUrl: "",
     descEs:
-      "Co-fund\u00e9 dos startups de movilidad urbana. Liderazgo de producto, desarrollo de comunidad, gesti\u00f3n de equipos multidisciplinarios, iteraci\u00f3n \u00e1gil y adaptaci\u00f3n a regulaciones locales. Experiencia real navegando la incertidumbre y el pivoteo estrat\u00e9gico.",
+      "Co-fundé dos startups de movilidad urbana. Liderazgo de producto, desarrollo de comunidad, gestión de equipos multidisciplinarios, iteración ágil y adaptación a regulaciones locales. Experiencia real navegando la incertidumbre y el pivoteo estratégico.",
     descEn:
       "Co-founded two urban mobility startups. Product leadership, community development, multidisciplinary team management, agile iteration, and adaptation to local regulations. Real-world experience navigating uncertainty and strategic pivoting.",
-    tags: ["NativeScript", "Node.js", "Firebase", "Product Leadership"],
+    tags: ["Co-founder", "Product Leadership", "Operations", "Strategy"],
   },
   {
-    periodEs: "2009 \u2014 2011",
-    periodEn: "2009 \u2014 2011",
+    periodEs: "2009 — 2011",
+    periodEn: "2009 — 2011",
     titleEs: "Full-Stack Developer",
     titleEn: "Full-Stack Developer",
     company: "Freelance",
     companyUrl: "",
     descEs:
-      "Desarrollo de aplicaciones web y sistemas a la medida para diversos clientes. Implementaci\u00f3n de APIs REST, dise\u00f1o de bases de datos y despliegues en servidores Linux.",
+      "Desarrollo de aplicaciones web y sistemas a la medida para diversos clientes. Implementación de APIs REST, diseño de bases de datos y despliegues en servidores Linux.",
     descEn:
       "Developed custom web projects and applications for various clients. Built APIs, integrated third-party services, and gained experience in multiple technologies later applied in creating ZOGA.",
-    tags: ["Java", "Flash", "MySQL", "Linux", "REST APIs"],
+    tags: ["Java", "MySQL", "Linux", "REST APIs"],
   },
 ]
 
@@ -48,7 +48,7 @@ export function Experience() {
   const { locale, t } = useI18n()
 
   return (
-    <section id="experience" className="px-6 py-24">
+    <section id="experience" className="bg-secondary px-6 py-24">
       <div className="mx-auto max-w-3xl">
         <h2 className="text-2xl font-bold tracking-tight text-foreground">
           {t("experience.title")}
@@ -80,7 +80,7 @@ export function Experience() {
                   {exp.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-muted-foreground"
+                      className="rounded-full bg-card px-3 py-1 text-xs font-medium text-muted-foreground"
                     >
                       {tag}
                     </span>

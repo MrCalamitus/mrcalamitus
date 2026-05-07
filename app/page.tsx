@@ -4,6 +4,7 @@ import { I18nProvider } from "@/lib/i18n"
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
+import { AIProduction } from "@/components/ai-production"
 import { Projects } from "@/components/projects"
 import { Experience } from "@/components/experience"
 import { Skills } from "@/components/skills"
@@ -18,6 +19,7 @@ export default function Page() {
         <main>
           <Hero />
           <About />
+          <AIProduction />
           <Projects />
           <Experience />
           <Skills />

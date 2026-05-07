@@ -27,7 +27,7 @@ export function About() {
                   rel="noopener noreferrer"
                   className="font-medium text-accent underline underline-offset-4"
                 >
-                  ZOGA mobile {"&"} IT
+                  ZOGA
                 </a>
                 {parts[1]}
               </>
