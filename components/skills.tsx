@@ -18,10 +18,11 @@ const skillGroups = [
   {
     key: "skills.ai" as const,
     items: [
-      "LLMs Integration",
-      "AI-Assisted Development (Cursor / Claude Code)",
+      "LLMs Integration (Gemini / Claude / ChatGPT)",
+      "Multi-Agent Systems",
+      "Local LLMs (Ollama / Hermes)",
+      "AI-Assisted Development (v0 / Cursor)",
       "Prompt Engineering",
-      "Ollama",
       "PyTorch",
     ],
   },
