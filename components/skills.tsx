@@ -16,6 +16,16 @@ const skillGroups = [
     items: ["AWS (EC2, S3, Lambda, RDS)", "Terraform (IaC)", "Docker", "CI/CD Pipelines", "Linux / Nginx"],
   },
   {
+    key: "skills.ai" as const,
+    items: [
+      "LLMs Integration",
+      "AI-Assisted Development (Cursor / Claude Code)",
+      "Prompt Engineering",
+      "Ollama",
+      "PyTorch",
+    ],
+  },
+  {
     key: "skills.mobile" as const,
     items: ["NativeScript"],
   },
