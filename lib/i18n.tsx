@@ -20,7 +20,7 @@ const translations = {
     "hero.cv": "Descargar CV",
     "about.title": "Sobre m\u00ed",
     "about.p1":
-      "Soy Luis Alberto Ortiz Meza, CTO y co-fundador de {link}, una empresa de desarrollo de software con 14 a\u00f1os de experiencia. Nos especializamos en desarrollo mobile, web, soluciones IT e integraci\u00f3n de IA para empresas.",
+      "Soy Luis Alberto Ortiz Meza, CTO y co-fundador de {link}, una empresa de desarrollo de software con 14 a\u00f1os de experiencia. Impulsando equipos de ingenier\u00eda de alto rendimiento con una mentalidad AI-first, integraciones de IA Generativa en producci\u00f3n y arquitecturas cloud robustas.",
     "about.p2":
       "A lo largo de mi carrera he liderado equipos de desarrollo, dise\u00f1ado arquitecturas cloud en AWS con Terraform, y construido sistemas cr\u00edticos para sectores como gobierno, movilidad urbana, seguridad y educaci\u00f3n.",
     "about.p3":
@@ -37,6 +37,7 @@ const translations = {
     "skills.databases": "Bases de Datos",
     "skills.cloud": "Cloud & DevOps",
     "skills.mobile": "Mobile & Frontend",
+    "skills.ai": "AI & Innovation",
     "skills.leadership": "Liderazgo",
     "contact.title": "Contacto",
     "contact.subtitle": "\u00bfTienes un proyecto en mente? Me encantar\u00eda saber de ti.",
@@ -60,7 +61,7 @@ const translations = {
     "hero.cv": "Download CV",
     "about.title": "About me",
     "about.p1":
-      "I\u2019m Luis Alberto Ortiz Meza, CTO and co-founder of {link}, a software development company with 14 years of experience. We specialize in mobile development, web solutions, IT infrastructure, and AI integration for businesses.",
+      "I\u2019m Luis Alberto Ortiz Meza, CTO and co-founder of {link}, a software development company with 14 years of experience. Driving high-performance engineering teams with an AI-first mindset, production-ready Generative AI integrations, and robust cloud architectures.",
     "about.p2":
       "Throughout my career I\u2019ve led development teams, designed cloud architectures on AWS with Terraform, and built mission-critical systems for sectors like government, urban mobility, security, and education.",
     "about.p3":
@@ -77,6 +78,7 @@ const translations = {
     "skills.databases": "Databases",
     "skills.cloud": "Cloud & DevOps",
     "skills.mobile": "Mobile & Frontend",
+    "skills.ai": "AI & Innovation",
     "skills.leadership": "Leadership",
     "contact.title": "Contact",
     "contact.subtitle": "Have a project in mind? I\u2019d love to hear from you.",

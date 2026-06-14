@@ -10,8 +10,8 @@ export function Contact() {
     {
       icon: Mail,
       label: t("contact.email"),
-      value: "luis@zoga.com.mx",
-      href: "mailto:luis@zoga.com.mx",
+      value: "calamitus.ortiz@gmail.com",
+      href: "mailto:calamitus.ortiz@gmail.com",
     },
     {
       icon: Github,

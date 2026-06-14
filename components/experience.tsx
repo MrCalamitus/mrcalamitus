@@ -11,10 +11,10 @@ const experiences = [
     company: "ZOGA mobile & IT",
     companyUrl: "https://zoga.com.mx",
     descEs:
-      "Co-fund\u00e9 ZOGA con un amigo. Lidero la visi\u00f3n t\u00e9cnica, la arquitectura de soluciones y el equipo de desarrollo. Dise\u00f1o e implemento sistemas a gran escala enfocados en la convergencia de Software, Hardware e IA. Gesti\u00f3n de infraestructura cloud en AWS con Terraform, desarrollo full-stack con Node.js, Java, MySQL, Firebase y Oracle. Productos liderados: Certisep, D\u00edgipris, Iaprep.",
+      "Co-fund\u00e9 ZOGA con un amigo. Lidero la visi\u00f3n t\u00e9cnica, la arquitectura de soluciones y el equipo de desarrollo. Liderando la transformaci\u00f3n hacia flujos de desarrollo asistidos por IA (AI-assisted development) para acelerar el time-to-market. Implement\u00e9 procesos multiag\u00e9nticos con LLMs locales que corren semana a semana para la prospecci\u00f3n autom\u00e1tica de clientes en Certisep. Dise\u00f1ando y escalando sistemas distribuidos de alta disponibilidad, microservicios basados en eventos y pipelines de telemetr\u00eda en tiempo real. Gesti\u00f3n de infraestructura cloud en AWS con Terraform, desarrollo full-stack con Node.js, Java, MySQL, Firebase y Oracle. Productos liderados: Certisep, D\u00edgipris, Iaprep.",
     descEn:
-      "Co-founded ZOGA with a friend. I lead the technical vision, solution architecture, and development team. Design and implement large-scale systems focused on the convergence of Software, Hardware, and AI. Cloud infrastructure management on AWS with Terraform, full-stack development with Node.js, Java, MySQL, Firebase, and Oracle. Products led: Certisep, D\u00edgipris, Iaprep.",
-    tags: ["Node.js", "Java", "MySQL", "Firebase", "Oracle", "AWS", "Terraform", "Docker", "OpenAI"],
+      "Co-founded ZOGA with a friend. I lead the technical vision, solution architecture, and development team. Leading the transformation toward AI-assisted development workflows to accelerate time-to-market. I built multi-agent workflows powered by local LLMs that run weekly for automated client prospecting in Certisep. Architecting and scaling high-availability distributed systems, event-driven microservices, and real-time telemetry pipelines. Cloud infrastructure management on AWS with Terraform, full-stack development with Node.js, Java, MySQL, Firebase, and Oracle. Products led: Certisep, D\u00edgipris, Iaprep.",
+    tags: ["AI-Driven Dev", "Multi-Agent Systems", "Local LLMs", "Distributed Systems", "Node.js", "Java", "MySQL", "Firebase", "Oracle", "AWS", "Terraform", "Docker"],
   },
   {
     periodEs: "2013 \u2014 2017",
