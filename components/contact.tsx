@@ -28,7 +28,7 @@ export function Contact() {
   ]
 
   return (
-    <section id="contact" className="bg-secondary px-6 py-24">
+    <section id="contact" className="px-6 py-24">
       <div className="mx-auto max-w-3xl">
         <h2 className="text-2xl font-bold tracking-tight text-foreground">
           {t("contact.title")}
@@ -55,7 +55,7 @@ export function Contact() {
 
         <div className="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
           <MapPin className="h-4 w-4" />
-          <span>{t("contact.location")}</span>
+          <span>Mexico City / Merida, Mexico</span>
         </div>
       </div>
     </section>

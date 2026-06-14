@@ -78,22 +78,18 @@ export function Hero() {
           </a>
         </div>
 
-        <p className="mt-4 text-xs text-muted-foreground">
-          {t("hero.availability")}
-        </p>
-
         <a
           href="#about"
-          className="mt-10 animate-bounce text-muted-foreground"
+          className="mt-12 animate-bounce text-muted-foreground"
           aria-label="Scroll down"
         >
           <ArrowDown className="h-5 w-5" />
         </a>
       </div>
       <span className="sr-only">
-        Luis Alberto Ortiz Meza, MrCalamitus, Tech Leader, AI Strategist, CTO, ZOGA, Head of AI, 
-        Engineering Leadership, LLM Integration, GenAI, AI Transformation, AWS, Terraform, 
-        Cloud Architecture, Python, Node.js, Mexico
+        Luis Alberto Ortiz Meza, MrCalamitus, CTO, Co-founder, Tech Lead, ZOGA, Full-Stack Developer,
+        Node.js, Java, AWS, Terraform, MySQL, Firebase, Oracle, NativeScript, Docker, Kubernetes,
+        CI/CD, REST APIs, Cybersecurity, Cloud Architecture, Mexico
       </span>
     </section>
   )

@@ -4,68 +4,24 @@ import { useI18n } from "@/lib/i18n"
 
 const skillGroups = [
   {
+    key: "skills.backend" as const,
+    items: ["Node.js", "Java", "Express", "TypeScript", "Python", "REST APIs", "GraphQL", "Microservicios"],
+  },
+  {
+    key: "skills.databases" as const,
+    items: ["MySQL", "Firebase / Firestore", "Oracle Database", "MongoDB", "SQL / NoSQL"],
+  },
+  {
+    key: "skills.cloud" as const,
+    items: ["AWS (EC2, S3, Lambda, RDS)", "Terraform (IaC)", "Docker", "CI/CD Pipelines", "Linux / Nginx"],
+  },
+  {
+    key: "skills.mobile" as const,
+    items: ["NativeScript"],
+  },
+  {
     key: "skills.leadership" as const,
-    items: [
-      "Engineering Leadership",
-      "Team Building & Hiring",
-      "Technical Strategy",
-      "Stakeholder Management",
-      "Regulatory Compliance",
-      "Product Leadership",
-      "Agile / Scrum",
-      "Mentoring",
-      "Strategic Planning",
-    ],
-  },
-  {
-    key: "skills.ai" as const,
-    items: [
-      "LLM Integration",
-      "RAG Architecture",
-      "Prompt Engineering",
-      "AI Product Strategy",
-      "Model Evaluation",
-      "AI Governance",
-      "OpenAI / Anthropic",
-      "Agent Design",
-    ],
-  },
-  {
-    key: "skills.architecture" as const,
-    items: [
-      "AWS (EC2, S3, Lambda, RDS)",
-      "Terraform (IaC)",
-      "Microservices",
-      "Docker",
-      "CI/CD",
-      "Linux / Nginx",
-      "Cloud Architecture",
-    ],
-  },
-  {
-    key: "skills.security" as const,
-    items: [
-      "Security by Design",
-      "Cryptography",
-      "e.firma",
-      "Cybersecurity (Master's)",
-      "Regulatory Compliance (SEP, COFEPRIS)",
-    ],
-  },
-  {
-    key: "skills.engineering" as const,
-    items: [
-      "Node.js",
-      "Java",
-      "Python",
-      "TypeScript",
-      "REST APIs",
-      "GraphQL",
-      "MySQL",
-      "MongoDB",
-      "Firebase",
-      "Oracle",
-    ],
+    items: ["Technical Leadership", "Agile / Scrum", "Strategic Planning", "Mentoring"],
   },
 ]
 
@@ -74,15 +30,15 @@ const certifications = [
 ]
 
 const education = [
-  { title: "Master's in Cybersecurity", org: "" },
-  { title: "Software Engineering", org: "" },
+  { title: "Master\u2019s in Cybersecurity", org: "" },
+  { title: "Software Engineering / Computer Science", org: "" },
 ]
 
 export function Skills() {
   const { t } = useI18n()
 
   return (
-    <section id="skills" className="px-6 py-24">
+    <section id="skills" className="bg-secondary px-6 py-24">
       <div className="mx-auto max-w-5xl">
         <h2 className="text-2xl font-bold tracking-tight text-foreground">
           {t("skills.title")}
