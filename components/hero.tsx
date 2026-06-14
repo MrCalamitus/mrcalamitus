@@ -53,7 +53,7 @@ export function Hero() {
             <Linkedin className="h-5 w-5" />
           </a>
           <a
-            href="mailto:luis@zoga.com.mx"
+            href="mailto:calamitus.ortiz@gmail.com"
             aria-label="Enviar email a Luis Alberto Ortiz Meza"
             className="rounded-full bg-secondary p-2.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
           >
