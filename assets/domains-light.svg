@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="590" height="440" viewBox="0 0 590 440" role="img">
+<defs></defs>
+<rect x="0.5" y="0.5" width="589" height="439" rx="20" fill="#F8FAFC" stroke="#E3E8EF"/>
+<text x="32" y="44" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="600" fill="#D97706" text-anchor="start" letter-spacing="3" opacity="1">WHERE THE WORK WENT</text>
+<text x="32" y="70" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#5B6B82" text-anchor="start" letter-spacing="0" opacity="1">Share of commits by domain, 2014 — 2026.</text>
+<path d="M180.4 146.0 A112 112 0 0 1 236.7 353.4 L216.8 321.0 A74 74 0 0 0 179.6 184.0 Z" fill="#0891B2" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.0s" fill="freeze"/></path>
+<path d="M232.5 355.8 A112 112 0 0 1 67.3 275.1 L104.9 269.3 A74 74 0 0 0 214.0 322.6 Z" fill="#D97706" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.25s" fill="freeze"/></path>
+<path d="M66.7 270.3 A112 112 0 0 1 175.6 146.0 L176.4 184.0 A74 74 0 0 0 104.4 266.1 Z" fill="#94A3B8" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.5s" fill="freeze"/></path>
+<text x="178" y="262" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="34" font-weight="800" fill="#0F172A" text-anchor="middle" letter-spacing="-1" opacity="1">7.5K</text>
+<text x="178" y="284" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="600" fill="#5B6B82" text-anchor="middle" letter-spacing="2" opacity="1">COMMITS</text>
+<rect x="340" y="176" width="12" height="12" rx="3" fill="#0891B2"/>
+<text x="362" y="188" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A" text-anchor="start" letter-spacing="0" opacity="1">GovTech &amp; elections</text>
+<text x="362" y="210" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#5B6B82" text-anchor="start" letter-spacing="0" opacity="1">42%  ·  3,109 commits</text>
+<rect x="340" y="238" width="12" height="12" rx="3" fill="#D97706"/>
+<text x="362" y="250" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A" text-anchor="start" letter-spacing="0" opacity="1">Legal-tech &amp; certification</text>
+<text x="362" y="272" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#5B6B82" text-anchor="start" letter-spacing="0" opacity="1">31%  ·  2,344 commits</text>
+<rect x="340" y="300" width="12" height="12" rx="3" fill="#94A3B8"/>
+<text x="362" y="312" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A" text-anchor="start" letter-spacing="0" opacity="1">Products &amp; client platforms</text>
+<text x="362" y="334" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#5B6B82" text-anchor="start" letter-spacing="0" opacity="1">27%  ·  2,027 commits</text>
+<text x="32" y="416" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="500" fill="#5B6B82" text-anchor="start" letter-spacing="0.5" opacity="0.9">Per-project counts use each year's top 5 repositories.</text>
+</svg>
