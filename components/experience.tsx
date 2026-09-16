@@ -4,43 +4,43 @@ import { useI18n } from "@/lib/i18n"
 
 const experiences = [
   {
-    periodEs: "2011 \u2014 Presente",
-    periodEn: "2011 \u2014 Present",
-    titleEs: "CTO, Co-fundador & Solution Architect",
-    titleEn: "CTO, Co-founder & Solution Architect",
+    periodEs: "mar 2012 \u2014 Presente",
+    periodEn: "Mar 2012 \u2014 Present",
+    titleEs: "Cofundador y CTO",
+    titleEn: "Co-founder & CTO",
     company: "ZOGA mobile & IT",
     companyUrl: "https://zoga.com.mx",
     descEs:
-      "Co-fund\u00e9 ZOGA con un amigo. Lidero la visi\u00f3n t\u00e9cnica, la arquitectura de soluciones y el equipo de desarrollo. Liderando la transformaci\u00f3n hacia flujos de desarrollo asistidos por IA (AI-assisted development) para acelerar el time-to-market. Implement\u00e9 procesos multiag\u00e9nticos con LLMs locales que corren semana a semana para la prospecci\u00f3n autom\u00e1tica de clientes en Certisep. Dise\u00f1ando y escalando sistemas distribuidos de alta disponibilidad, microservicios basados en eventos y pipelines de telemetr\u00eda en tiempo real. Gesti\u00f3n de infraestructura cloud en AWS con Terraform, desarrollo full-stack con Node.js, Java, MySQL, Firebase y Oracle. Productos liderados: Certisep, D\u00edgipris, Iaprep.",
+      "Empresa de desarrollo de software. Dirijo la visi\u00f3n t\u00e9cnica, la arquitectura de soluciones y equipos de hasta 5 personas. Desde 2018 dise\u00f1o y dirijo Certisep, el producto SaaS de ZOGA para emitir, firmar electr\u00f3nicamente y validar t\u00edtulos y certificados electr\u00f3nicos (XML SEP). Dise\u00f1\u00e9 y desplegu\u00e9 pipelines multiagente de prospecci\u00f3n con LLM locales (CrewAI + Ollama): las visitas semanales al sitio pasaron de 2\u20135 a 80\u201390, con 5 prospectos calificados por semana. Encabec\u00e9 la adopci\u00f3n de IA del equipo en desarrollo, captaci\u00f3n de clientes y an\u00e1lisis de documentos.",
     descEn:
-      "Co-founded ZOGA with a friend. I lead the technical vision, solution architecture, and development team. Leading the transformation toward AI-assisted development workflows to accelerate time-to-market. I built multi-agent workflows powered by local LLMs that run weekly for automated client prospecting in Certisep. Architecting and scaling high-availability distributed systems, event-driven microservices, and real-time telemetry pipelines. Cloud infrastructure management on AWS with Terraform, full-stack development with Node.js, Java, MySQL, Firebase, and Oracle. Products led: Certisep, D\u00edgipris, Iaprep.",
-    tags: ["AI-Driven Dev", "Multi-Agent Systems", "Local LLMs", "Distributed Systems", "Node.js", "Java", "MySQL", "Firebase", "Oracle", "AWS", "Terraform", "Docker"],
+      "Software development company. I lead the technical vision, solution architecture and teams of up to 5 engineers. Since 2018 I have architected and led Certisep, ZOGA\u2019s SaaS product for issuing, digitally signing and validating electronic degrees and certificates (SEP XML standard). Designed and deployed multi-agent prospecting pipelines with local LLMs (CrewAI + Ollama): weekly site visits grew from 2\u20135 to 80\u201390, generating 5 qualified leads per week. Led the team\u2019s AI adoption in development, customer acquisition and document analysis.",
+    tags: ["Solution Architecture", "Multi-Agent Systems", "Local LLMs", "AWS", "Terraform", "Node.js", "Python", "Security by Design"],
   },
   {
-    periodEs: "2013 \u2014 2017",
-    periodEn: "2013 \u2014 2017",
-    titleEs: "Co-fundador & Tech Lead",
-    titleEn: "Co-founder & Tech Lead",
-    company: "Upperbus & Rideupp",
+    periodEs: "mar 2012 \u2014 2026",
+    periodEn: "Mar 2012 \u2014 2026",
+    titleEs: "Desarrollador \u2192 Arquitecto Cloud y Desarrollador L\u00edder",
+    titleEn: "Software Developer \u2192 Cloud Architect & Lead Developer",
+    company: "Instituto Polit\u00e9cnico Nacional (IPN) \u2014 ESIME Culhuac\u00e1n",
     companyUrl: "",
     descEs:
-      "Co-fund\u00e9 dos startups de movilidad urbana. Liderazgo de producto, desarrollo de comunidad, gesti\u00f3n de equipos multidisciplinarios, iteraci\u00f3n \u00e1gil y adaptaci\u00f3n a regulaciones locales. Experiencia real navegando la incertidumbre y el pivoteo estrat\u00e9gico.",
+      "Proyectos de tecnolog\u00eda para gobierno por convenio de colaboraci\u00f3n del IPN, por proyecto y en paralelo a ZOGA; empec\u00e9 como desarrollador y crec\u00ed a l\u00edder de equipo y arquitecto cloud. IAPREP: arquitecto cloud del producto de IA del equipo para leer actas electorales, evaluado por el INE en 2024 como el mejor de 3 soluciones. COFEPRIS: arquitecto y desarrollador l\u00edder de un motor de flujos que digitaliz\u00f3 m\u00e1s de 100 tr\u00e1mites regulatorios. INE e IEEM: auditor\u00edas de sistemas electorales, incluido el voto por internet y 4 modelos de urna electr\u00f3nica. Red Integral Notarial: l\u00edder de backend y administrador cloud, con VPN para 250 notar\u00edas. Tambi\u00e9n IoT para detecci\u00f3n de fugas de gas (SECTEI, 5,000 dispositivos) y facturaci\u00f3n electr\u00f3nica para TIMEX (5,000 facturas por minuto).",
     descEn:
-      "Co-founded two urban mobility startups. Product leadership, community development, multidisciplinary team management, agile iteration, and adaptation to local regulations. Real-world experience navigating uncertainty and strategic pivoting.",
-    tags: ["NativeScript", "Node.js", "Firebase", "Product Leadership"],
+      "Project-based government technology work under IPN collaboration agreements, in parallel with ZOGA; started as a developer and grew into team lead and cloud architect. IAPREP: cloud architect of the team\u2019s AI product that reads electoral tally sheets, rated best of 3 solutions in INE\u2019s 2024 evaluation. COFEPRIS: architect and lead developer of a workflow engine that digitized 100+ regulatory procedures. INE and IEEM: electoral system audits, including internet voting and 4 electronic voting machine models. Red Integral Notarial: lead backend engineer and cloud administrator, with a VPN for 250 notary offices. Also IoT gas-leak detection (SECTEI, 5,000 devices) and CFDI e-invoicing for TIMEX (5,000 invoices per minute).",
+    tags: ["PyTorch", "AWS Serverless", "AppSync", "DynamoDB", "Terraform", "IoT", "Security Audits", "e.firma"],
   },
   {
-    periodEs: "2009 \u2014 2011",
-    periodEn: "2009 \u2014 2011",
-    titleEs: "Full-Stack Developer",
-    titleEn: "Full-Stack Developer",
-    company: "Freelance",
+    periodEs: "2015 \u2014 2017",
+    periodEn: "2015 \u2014 2017",
+    titleEs: "Cofundador",
+    titleEn: "Co-founder",
+    company: "Upperbus (despu\u00e9s Rideupp)",
     companyUrl: "",
     descEs:
-      "Desarrollo de aplicaciones web y sistemas a la medida para diversos clientes. Implementaci\u00f3n de APIs REST, dise\u00f1o de bases de datos y despliegues en servidores Linux.",
+      "Startup de movilidad urbana. Naci\u00f3 como Upperbus, rutas de autob\u00fas compartidas para personas con origen y destino en com\u00fan, y despu\u00e9s pivot\u00f3 su modelo de negocio a Rideupp, una plataforma de carpool. Liderazgo de producto, equipo multidisciplinario y operaci\u00f3n en ciudad.",
     descEn:
-      "Developed custom web projects and applications for various clients. Built APIs, integrated third-party services, and gained experience in multiple technologies later applied in creating ZOGA.",
-    tags: ["Java", "Flash", "MySQL", "Linux", "REST APIs"],
+      "Urban mobility startup. Launched as Upperbus, shared bus routes for commuters with a common origin and destination, then pivoted the business model to Rideupp, a carpooling platform. Product leadership, multidisciplinary team and city operations.",
+    tags: ["NativeScript", "Node.js", "Firebase", "AWS", "Product Leadership"],
   },
 ]
 

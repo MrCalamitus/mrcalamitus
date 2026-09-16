@@ -4,45 +4,61 @@ import { useI18n } from "@/lib/i18n"
 
 const skillGroups = [
   {
-    key: "skills.backend" as const,
-    items: ["Node.js", "Java", "Express", "TypeScript", "Python", "REST APIs", "GraphQL", "Microservicios"],
-  },
-  {
-    key: "skills.databases" as const,
-    items: ["MySQL", "Firebase / Firestore", "Oracle Database", "MongoDB", "SQL / NoSQL"],
-  },
-  {
-    key: "skills.cloud" as const,
-    items: ["AWS (EC2, S3, Lambda, RDS)", "Terraform (IaC)", "Docker", "CI/CD Pipelines", "Linux / Nginx"],
-  },
-  {
     key: "skills.ai" as const,
     items: [
-      "LLMs Integration (Gemini / Claude / ChatGPT)",
-      "Multi-Agent Systems",
-      "Local LLMs (Ollama / Hermes)",
-      "AI-Assisted Development (v0 / Cursor)",
+      "Amazon Bedrock (Knowledge Bases, Guardrails)",
+      "RAG",
+      "Vector Search (S3 Vectors)",
+      "LLM Evaluation",
+      "Multi-Agent Systems (CrewAI)",
+      "Local LLMs (Ollama / Qwen)",
+      "LLM APIs (Claude / Gemini / ChatGPT)",
+      "PyTorch / Computer Vision",
+      "AI-Assisted Development (Claude Code / Cursor)",
       "Prompt Engineering",
-      "PyTorch",
     ],
   },
   {
-    key: "skills.mobile" as const,
-    items: ["NativeScript"],
+    key: "skills.cloud" as const,
+    items: [
+      "AWS ( Lambda, AppSync, DynamoDB, lambda, ECS Fargate, Bedrock, S3, CloudFront, Route 53, Cognito, CloudWatch, CloudTrail, IAM ...)",
+      "Serverless",
+      "Terraform (IaC)",
+      "Docker",
+      "CI/CD Pipelines",
+      "Google Cloud / Firebase",
+      "Linux / Nginx",
+    ],
+  },
+  {
+    key: "skills.backend" as const,
+    items: ["Python", "Node.js", "TypeScript", "Java", "FastAPI", "Express", "GraphQL", "REST APIs", "Microservices"],
+  },
+  {
+    key: "skills.frontend" as const,
+    items: [ "Next.js", "Vue.js", "React", "Tailwind CSS", "SASS / SCSS", "HTML5 / CSS3", "JavaScript (ES6+)", "React Native", "Mobile Development with NS (iOS / Android)","material-ui", "Vuetify", "Bootstrap"],
+  },
+  {
+    key: "skills.databases" as const,
+    items: ["DynamoDB", "DocumentDB / MongoDB", "MySQL", "Oracle Database", "Firebase / Firestore"],
+  },
+  {
+    key: "skills.security" as const,
+    items: ["Security by Design", "e.firma & Applied Cryptography", "Security Audits", "Regulatory Compliance"],
   },
   {
     key: "skills.leadership" as const,
-    items: ["Technical Leadership", "Agile / Scrum", "Strategic Planning", "Mentoring"],
+    items: ["Technical Leadership (teams of up to 5)", "Agile / Scrum", "Mentoring"],
   },
 ]
 
 const certifications = [
-  { title: "AWS Cloud Practitioner", org: "Amazon Web Services" },
+  { title: "AWS Certified Cloud Practitioner (2021\u20132024)", org: "Amazon Web Services" },
 ]
 
 const education = [
-  { title: "Master\u2019s in Cybersecurity", org: "" },
-  { title: "Software Engineering / Computer Science", org: "" },
+  { title: "M.Eng. in Information Security and Information Technologies \u2014 IPN (2020\u20132024)", org: "IPN" },
+  { title: "B.Eng. in Computer Engineering \u2014 IPN, ESIME Culhuac\u00e1n (2008\u20132014)", org: "IPN" },
 ]
 
 export function Skills() {

@@ -87,9 +87,9 @@ export function Hero() {
         </a>
       </div>
       <span className="sr-only">
-        Luis Alberto Ortiz Meza, MrCalamitus, CTO, Co-founder, Tech Lead, ZOGA, Full-Stack Developer,
-        Node.js, Java, AWS, Terraform, MySQL, Firebase, Oracle, NativeScript, Docker, Kubernetes,
-        CI/CD, REST APIs, Cybersecurity, Cloud Architecture, Mexico
+        Luis Alberto Ortiz Meza, MrCalamitus, Solutions Architect, Cloud Architect, Applied AI, Tech Lead,
+        CTO, Co-founder, ZOGA, AWS, Amazon Bedrock, RAG, Multi-agent LLM Systems, PyTorch, Terraform,
+        Serverless, Python, Node.js, Information Security, Mexico City
       </span>
     </section>
   )
