@@ -7,6 +7,7 @@ import { About } from "@/components/about"
 import { Projects } from "@/components/projects"
 import { Experience } from "@/components/experience"
 import { Skills } from "@/components/skills"
+import { AwsArchitecture } from "@/components/aws-architecture"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 
@@ -21,6 +22,7 @@ export default function Page() {
           <Projects />
           <Experience />
           <Skills />
+          <AwsArchitecture />
           <Contact />
         </main>
         <Footer />
